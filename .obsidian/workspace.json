@@ -138,11 +138,12 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -156,7 +157,7 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "69b976ae9cb15308",
+  "active": "701553845b13fb13",
   "lastOpenFiles": [
     "@attachments/test-eula.jpg",
     "New Text Document.txt",
