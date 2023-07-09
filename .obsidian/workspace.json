@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@templates/New post.md",
+                "file": "@templates/TPost.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@templates/New post.md",
+                "file": "@templates/TPost.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@templates/New post.md",
+                "file": "@templates/TPost.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@templates/New post.md"
+                "file": "@templates/TPost.md"
               }
             }
           },
@@ -160,8 +160,8 @@
   },
   "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
-    "works/lorem ipsum.md",
     "@templates/New post.md",
+    "works/lorem ipsum.md",
     "posts/2023-07-09_23-59-13__lorem-ipsum-dolor-sit-amet.md",
     "posts/2023-07-09_23-59-05__test-here.md",
     "works/next-gdrive-index.md",
