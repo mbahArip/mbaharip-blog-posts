@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/First posts.md",
+                "file": "posts/first-post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/First posts.md",
+                "file": "posts/first-post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/First posts.md",
+                "file": "posts/first-post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/First posts.md"
+                "file": "posts/first-post.md"
               }
             }
           },
@@ -137,7 +137,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -155,7 +156,7 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "69b976ae9cb15308",
+  "active": "8d78b2b4bea9facd",
   "lastOpenFiles": [
     "New Text Document.txt",
     "@attachments/banner/630704bf8fd458a5a1b71fc3_thumb.webp",
@@ -163,7 +164,7 @@
     "@attachments/logo.svg",
     "@attachments",
     "posts",
-    "posts/First posts.md",
+    "posts/first-post.md",
     "piecesdb.json"
   ]
 }
