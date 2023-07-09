@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/2023-07-09_21-03-59__first-post.md",
+                "file": "works/next-gdrive-index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/2023-07-09_21-03-59__first-post.md",
+                "file": "works/next-gdrive-index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/2023-07-09_21-03-59__first-post.md",
+                "file": "works/next-gdrive-index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/2023-07-09_21-03-59__first-post.md"
+                "file": "works/next-gdrive-index.md"
               }
             }
           },
@@ -157,8 +157,11 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "701553845b13fb13",
+  "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
+    "posts/2023-07-09_21-03-59__first-post.md",
+    "works/next-gdrive-index.md",
+    "works",
     "@attachments/test-eula.jpg",
     "New Text Document.txt",
     "@attachments/banner/630704bf8fd458a5a1b71fc3_thumb.webp",
@@ -166,7 +169,6 @@
     "@attachments/logo.svg",
     "@attachments",
     "posts",
-    "posts/2023-07-09_21-03-59__first-post.md",
     "piecesdb.json"
   ]
 }
