@@ -151,11 +151,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "pieces-for-developers:Pieces For Developers": false
+      "pieces-for-developers:Pieces For Developers": false,
+      "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "a6a9c54e70cc3922",
+  "active": "69b976ae9cb15308",
   "lastOpenFiles": [
+    "@attachments/banner",
     "@attachments/logo.svg",
     "@attachments",
     "posts",
