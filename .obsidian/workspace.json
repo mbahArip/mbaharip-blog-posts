@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "works/next-gdrive-index.md",
+                "file": "@templates/Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "works/next-gdrive-index.md",
+                "file": "@templates/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "works/next-gdrive-index.md",
+                "file": "@templates/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "works/next-gdrive-index.md"
+                "file": "@templates/Untitled.md"
               }
             }
           },
@@ -160,8 +160,9 @@
   },
   "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
-    "posts/2023-07-09_21-03-59__first-post.md",
     "works/next-gdrive-index.md",
+    "@templates/Untitled.md",
+    "posts/2023-07-09_21-03-59__first-post.md",
     "@templates/New Post.md",
     "@templates",
     "@attachments/logo.svg",
