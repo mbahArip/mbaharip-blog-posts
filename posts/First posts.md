@@ -4,7 +4,7 @@ created: 2023-07-09T21:02:31+07:00
 updated: 2023-07-09T21:09:15+07:00
 banner: "![[630704bf8fd458a5a1b71fc3_thumb.webp]]"
 ---
-!(Logo)[]
+![[logo.svg]]
 Finally I can implement my own blog using NextJS, Github, and Obsidian.
 I'm using NextJS as the framework for this website, Github for storing all of the blog posts, and Obsidian as editor for the blogs.
 
