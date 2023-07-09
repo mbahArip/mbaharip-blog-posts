@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@templates/{{date}}_{{time}}__{{title}}.md",
+                "file": "@templates/New blog post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@templates/{{date}}_{{time}}__{{title}}.md",
+                "file": "@templates/New blog post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@templates/{{date}}_{{time}}__{{title}}.md",
+                "file": "@templates/New blog post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@templates/{{date}}_{{time}}__{{title}}.md"
+                "file": "@templates/New blog post.md"
               }
             }
           },
@@ -160,9 +160,9 @@
   },
   "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
-    "posts/Untitled.md",
     "@templates/{{date}}_{{time}}__{{title}}.md",
-    "@templates/New Post.md",
+    "@templates/New blog post.md",
+    "posts/2023-07-09 meeting x.md",
     "works/next-gdrive-index.md",
     "posts/2023-07-09_21-03-59__first-post.md",
     "@templates",
