@@ -154,14 +154,15 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "pieces-for-developers:Pieces For Developers": false,
-      "oz-clear-unused-images:Clear Unused Images": false
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "templater-obsidian:Templater": false
     }
   },
   "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
-    "posts/2023-07-09_21-03-59__first-post.md",
-    "@templates/New Post.md",
     "works/next-gdrive-index.md",
+    "@templates/New Post.md",
+    "posts/2023-07-09_21-03-59__first-post.md",
     "@templates",
     "@attachments/logo.svg",
     "works",
