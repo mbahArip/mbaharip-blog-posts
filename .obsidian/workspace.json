@@ -11,12 +11,8 @@
             "id": "a6a9c54e70cc3922",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Untitled.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -38,7 +34,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "byModifiedTime"
               }
             }
           },
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Untitled.md"
-              }
+              "state": {}
             }
           },
           {
@@ -161,8 +153,10 @@
   "active": "69b976ae9cb15308",
   "lastOpenFiles": [
     "posts/2023-07-09_23-43-31__test.md",
+    "posts/2023-07-09_23-44-20__test.md",
     "Untitled.md",
     "@templates/New blog post.md",
+    "@templates/TBlogPost.md",
     "posts/2023-07-09_23-35-37__[object Promise].md",
     "@templates/{{date}}_{{time}}__{{title}}.md",
     "works/next-gdrive-index.md",
