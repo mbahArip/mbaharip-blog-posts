@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/07092023_first-post.md",
+                "file": "posts/07092023_210340__first-post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/07092023_first-post.md",
+                "file": "posts/07092023_210340__first-post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/07092023_first-post.md",
+                "file": "posts/07092023_210340__first-post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/07092023_first-post.md"
+                "file": "posts/07092023_210340__first-post.md"
               }
             }
           },
@@ -164,7 +164,7 @@
     "@attachments/logo.svg",
     "@attachments",
     "posts",
-    "posts/07092023_first-post.md",
+    "posts/07092023_210340__first-post.md",
     "piecesdb.json"
   ]
 }
