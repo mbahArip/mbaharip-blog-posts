@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#works",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -139,11 +138,12 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,7 +157,7 @@
       "oz-clear-unused-images:Clear Unused Images": false
     }
   },
-  "active": "1c0328e6190a275c",
+  "active": "69b976ae9cb15308",
   "lastOpenFiles": [
     "posts/2023-07-09_21-03-59__first-post.md",
     "@attachments/logo.svg",
