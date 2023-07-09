@@ -14,5 +14,14 @@
       ],
       "key": "2"
     }
-  ]
+  ],
+  "templater-obsidian:@templates/New post.md": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "N"
+    }
+  ],
+  "file-explorer:new-file": []
 }
