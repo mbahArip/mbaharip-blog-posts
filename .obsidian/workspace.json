@@ -160,9 +160,9 @@
   },
   "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
-    "@templates/{{date}}_{{time}}__{{title}}.md",
-    "@templates/New blog post.md",
     "posts/2023-07-09 meeting x.md",
+    "@templates/New blog post.md",
+    "@templates/{{date}}_{{time}}__{{title}}.md",
     "works/next-gdrive-index.md",
     "posts/2023-07-09_21-03-59__first-post.md",
     "@templates",
