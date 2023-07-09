@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@templates/New work post.md",
+                "file": "@templates/TWorkPost.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@templates/New work post.md",
+                "file": "@templates/TWorkPost.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@templates/New work post.md",
+                "file": "@templates/TWorkPost.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@templates/New work post.md"
+                "file": "@templates/TWorkPost.md"
               }
             }
           },
@@ -160,10 +160,12 @@
   },
   "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
-    "@templates/New blog post.md",
     "@templates/New work post.md",
-    "posts/2023-07-09_23-47-50__test.md",
+    "@templates/New blog post.md",
     "@templates/TBlogPost.md",
+    "@templates/TWorkPost.md",
+    "posts/2023-07-09_23-49-03__test.md",
+    "posts/2023-07-09_23-47-50__test.md",
     "posts/2023-07-09_23-47-01__test.md",
     "posts/2023-07-09_23-46-29__test.md",
     "Untitled.md",

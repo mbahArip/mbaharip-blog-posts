@@ -7,5 +7,7 @@
   "headerCreated": "created",
   "minMinutesBetweenSaves": 1,
   "ignoreGlobalFolder": [],
-  "ignoreCreatedFolder": []
+  "ignoreCreatedFolder": [
+    "@templates"
+  ]
 }

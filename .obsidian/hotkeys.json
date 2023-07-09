@@ -1,1 +1,18 @@
-{}
+{
+  "templater-obsidian:@templates/New blog post.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "1"
+    }
+  ],
+  "templater-obsidian:@templates/New work post.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "2"
+    }
+  ]
+}
