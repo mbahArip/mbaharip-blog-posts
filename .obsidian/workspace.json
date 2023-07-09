@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "@templates/New blog post.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "@templates/New blog post.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "@templates/New blog post.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "@templates/New blog post.md"
+                "file": "Untitled.md"
               }
             }
           },
@@ -158,11 +158,12 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "a6a9c54e70cc3922",
+  "active": "69b976ae9cb15308",
   "lastOpenFiles": [
+    "posts/2023-07-09_23-43-31__test.md",
     "Untitled.md",
-    "posts/2023-07-09_23-35-37__[object Promise].md",
     "@templates/New blog post.md",
+    "posts/2023-07-09_23-35-37__[object Promise].md",
     "@templates/{{date}}_{{time}}__{{title}}.md",
     "works/next-gdrive-index.md",
     "posts/2023-07-09_21-03-59__first-post.md",
