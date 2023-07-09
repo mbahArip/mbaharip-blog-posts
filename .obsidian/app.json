@@ -1,0 +1,9 @@
+{
+  "showFrontmatter": true,
+  "showLineNumber": false,
+  "tabSize": 2,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "./@Attachments",
+  "showInlineTitle": true
+}
