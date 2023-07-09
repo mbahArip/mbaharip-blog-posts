@@ -1,7 +1,8 @@
 ---
 title: First posts
 created: 2023-07-09T21:02:31+07:00
-updated: 2023-07-09T21:02:31+07:00
+updated: 2023-07-09T21:09:15+07:00
+banner: "![[630704bf8fd458a5a1b71fc3_thumb.webp]]"
 ---
 ![[logo.svg]]
 Finally I can implement my own blog using NextJS, Github, and Obsidian.
