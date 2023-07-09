@@ -6,8 +6,8 @@
   "headerUpdated": "updated",
   "headerCreated": "created",
   "minMinutesBetweenSaves": 1,
-  "ignoreGlobalFolder": [],
-  "ignoreCreatedFolder": [
+  "ignoreGlobalFolder": [
     "@templates"
-  ]
+  ],
+  "ignoreCreatedFolder": []
 }
