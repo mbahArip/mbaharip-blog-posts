@@ -22,9 +22,21 @@
               "type": "empty",
               "state": {}
             }
+          },
+          {
+            "id": "a6a9c54e70cc3922",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/First posts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,6 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "posts/First posts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,6 +119,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "posts/First posts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +141,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "posts/First posts.md"
+              }
             }
           },
           {
@@ -138,8 +154,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -156,8 +171,12 @@
       "pieces-for-developers:Pieces For Developers": false
     }
   },
-  "active": "701553845b13fb13",
+  "active": "a6a9c54e70cc3922",
   "lastOpenFiles": [
+    "@attachments/logo.svg",
+    "@attachments",
+    "posts",
+    "posts/First posts.md",
     "piecesdb.json"
   ]
 }

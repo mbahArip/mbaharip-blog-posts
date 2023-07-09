@@ -4,6 +4,6 @@
   "tabSize": 2,
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": true,
-  "attachmentFolderPath": "./@Attachments",
+  "attachmentFolderPath": "@attachments",
   "showInlineTitle": true
 }
