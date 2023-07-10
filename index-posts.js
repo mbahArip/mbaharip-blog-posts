@@ -131,7 +131,7 @@ function parsePostData(data) {
     }, {});
 
   const fm = {
-    title: rawFm.title ?? data.title ?? 'Untitled',
+    title: rawFm.title || data.name || 'Untitled',
     description: processDescription(markdown ?? ''),
     banner: processBanner(rawFm.banner ?? ''),
     tags: processTags(rawFm.tags ?? ''),
