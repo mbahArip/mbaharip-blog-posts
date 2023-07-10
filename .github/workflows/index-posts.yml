@@ -1,0 +1,25 @@
+name: Index Posts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Index Posts
+        run: node index-posts.js
+
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update posts index"
+          commit_options: "--no-verify"
