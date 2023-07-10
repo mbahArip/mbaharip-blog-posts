@@ -26,7 +26,7 @@ async function run() {
       });
 
       const data = parsePostData(content.data);
-      const slug = parseWorkFileName(file.name);
+      const slug = parseBlogFileName(file.name);
 
       return {
         title: data.metadata.title,
@@ -60,6 +60,7 @@ async function run() {
 
       const data = parsePostData(content.data);
       const slug = parseWorkFileName(file.name);
+      console.log(data);
 
       return {
         title: data.metadata.title,
@@ -130,7 +131,7 @@ function parsePostData(data) {
     }, {});
 
   const fm = {
-    title: rawFm.title ?? '',
+    title: rawFm.title ?? data.title ?? 'Untitled',
     description: processDescription(markdown ?? ''),
     banner: processBanner(rawFm.banner ?? ''),
     tags: processTags(rawFm.tags ?? ''),

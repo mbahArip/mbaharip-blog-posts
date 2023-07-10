@@ -6,7 +6,7 @@
     "updated": "2023-07-10T00:30:03.000Z",
     "banner": "/api/attachments/banner/630704bf8fd458a5a1b71fc3_thumb.webp",
     "tags": [],
-    "path": "/works/2023-07-09_21-03-59__first-post.md"
+    "path": "/blogs/2023/07/09/210359_first-post"
   },
   {
     "title": "Test Banner",
@@ -19,7 +19,7 @@
       "#test",
       "#banner"
     ],
-    "path": "/works/2023-07-10_06-59-54__test-banner.md"
+    "path": "/blogs/2023/07/10/065954_test-banner"
   },
   {
     "title": "Lorem ipsum",
@@ -31,6 +31,6 @@
       "#test",
       "#obsidian"
     ],
-    "path": "/works/2023-07-10_10-04-21__test-sort.md"
+    "path": "/blogs/2023/07/10/100421_test-sort"
   }
 ]
