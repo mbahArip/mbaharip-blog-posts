@@ -1,4 +1,5 @@
----
-created: 2023-07-10T09:59:28+07:00
-updated: 2023-07-10T09:59:28+07:00
----
+```dataview
+TABLE title as PostTitle, banner as PostBanner, tags as PostTags, created as createdAt, updated as updatedAt
+FROM "posts"
+SORT updatedAt ASC
+```
