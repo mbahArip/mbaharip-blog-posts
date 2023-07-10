@@ -25,15 +25,17 @@ async function run() {
         path: file.path,
       });
 
-      const { data: frontmatter } = matter(content.data);
+      const data = parsePostData(content);
+      const slug = parseWorkFileName(file.name);
 
       return {
-        title: frontmatter.title,
-        created: frontmatter.created,
-        updated: frontmatter.updated,
-        banner: frontmatter.banner ?? "",
-        tags: frontmatter.tags ?? "",
-        path: parseBlogFileName(file.name),
+        title: data.metadata.title,
+        description: data.metadata.description,
+        created: data.metadata.created,
+        updated: data.metadata.updated,
+        banner: data.metadata.banner,
+        tags: data.metadata.tags,
+        path: slug,
       };
     })
   );
@@ -54,15 +56,17 @@ async function run() {
         path: file.path,
       });
 
-      const { data: frontmatter } = matter(content.data);
+      const data = parsePostData(content);
+      const slug = parseBlogFileName(file.name);
 
       return {
-        title: frontmatter.title,
-        created: frontmatter.created,
-        updated: frontmatter.updated,
-        banner: frontmatter.banner,
-        tags: frontmatter.tags,
-        path: parseWorkFileName(file.name),
+        title: data.metadata.title,
+        description: data.metadata.description,
+        created: data.metadata.created,
+        updated: data.metadata.updated,
+        banner: data.metadata.banner,
+        tags: data.metadata.tags,
+        path: slug,
       };
     })
   );
@@ -107,6 +111,66 @@ function parseWorkFileName(name){
     const slug = `/works/${name}`
     return slug
 }
+
+function parsePostData(data) {
+  let markdown = Buffer.from(data.content, 'base64').toString('utf-8');
+  const frontMatter = markdown.match(/^---\n([\s\S]*?)\n---\n/)?.[1] ?? '';
+  markdown = markdown.replace(/^---\n([\s\S]*?)\n---\n/, '');
+
+  const rawFm = frontMatter
+    .split('\n')
+    .map((line) => line.split(': '))
+    .reduce((acc, [key, value]) => {
+      return {
+        ...acc,
+        [key]: value,
+      };
+    }, {});
+
+  const fm = {
+    title: rawFm.title ?? '',
+    description: processDescription(markdown ?? ''),
+    banner: processBanner(rawFm.banner ?? ''),
+    tags: processTags(rawFm.tags ?? ''),
+    created: new Date(rawFm.created),
+    updated: new Date(rawFm.updated),
+  };
+
+  return {
+    content: markdown,
+    metadata: fm,
+  };
+}
+
+function processDescription(markdown) {
+  const DESC_LENGTH = 150;
+
+  return markdown
+    .replace(/!\[\[([^\]]+)\]\]/g, '')
+    .replace(/<[^>]*>?/gm, '')
+    .replace(/#+\s/g, '')
+    .replace(/\n/g, ' ')
+    .substring(0, DESC_LENGTH)
+    .trim()
+    .concat(markdown.length > DESC_LENGTH ? '...' : '');
+}
+function processBanner(fmBanner) {
+  if (!fmBanner) return '/api/attachments/no-banner.webp';
+  let url = '';
+  if (/!\[\[([^\]]+)\]\]/g.test(fmBanner)) {
+    url = fmBanner.match(/!\[\[([^\]]+)\]\]/)?.[1] ?? 'logo.webp';
+    url = `/api/attachments/banner/${url}`;
+  } else {
+    url = fmBanner.replace(/"/g, '').replace(/\\/g, '');
+  }
+
+  return url;
+}
+function processTags(fmTags) {
+  if (!fmTags) return [];
+  return fmTags.split(' ').map((tag) => tag.trim());
+}
+
 
 run().catch((error) => {
   console.error(error);
