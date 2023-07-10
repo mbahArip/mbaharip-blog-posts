@@ -110,7 +110,11 @@ function parseBlogFileName(name) {
   return slug;
 }
 function parseWorkFileName(name){
-    const slug = `/works/${name}`
+    let file = name;
+    if(name.split('.')) {
+      file = name.split('.')[0];
+    }
+    const slug = `/works/${file}`;
     return slug
 }
 
