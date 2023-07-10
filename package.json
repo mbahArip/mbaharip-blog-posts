@@ -1,0 +1,12 @@
+{
+    "name": "mbaharip-blog-posts",
+    "version": "1.0.0",
+    "description": "Indexing posts everytime I push a new post into the repositories",
+    "main": "index-posts.js",
+    "dependencies": {
+      "@octokit/rest": "^18.0.4",
+      "gray-matter": "^4.0.3",
+      "matter": "^2.2.1",
+      "moment": "^2.29.1"
+    }
+  }
