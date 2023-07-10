@@ -56,7 +56,7 @@ async function run() {
         path: file.path,
       });
 
-      console.log(content)
+      if(!content) return;
 
       const data = parsePostData(content);
       const slug = parseBlogFileName(file.name);
