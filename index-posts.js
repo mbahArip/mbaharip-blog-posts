@@ -60,7 +60,6 @@ async function run() {
 
       const data = parsePostData(content.data);
       const slug = parseWorkFileName(file.name);
-      console.log(data);
 
       return {
         title: data.metadata.title,
@@ -131,7 +130,7 @@ function parsePostData(data) {
     }, {});
 
   const fm = {
-    title: rawFm.title || data.name || 'Untitled',
+    title: rawFm.title || data.name?.split('.')[0] || 'Untitled',
     description: processDescription(markdown ?? ''),
     banner: processBanner(rawFm.banner ?? ''),
     tags: processTags(rawFm.tags ?? ''),
