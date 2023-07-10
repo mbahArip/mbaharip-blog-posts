@@ -25,7 +25,7 @@ async function run() {
         path: file.path,
       });
 
-      const data = parsePostData(content);
+      const data = parsePostData(content.data);
       const slug = parseWorkFileName(file.name);
 
       return {
@@ -58,7 +58,7 @@ async function run() {
 
       if(!content) return;
 
-      const data = parsePostData(content);
+      const data = parsePostData(content.data);
       const slug = parseBlogFileName(file.name);
 
       return {
