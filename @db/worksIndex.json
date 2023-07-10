@@ -1,5 +1,14 @@
 [
   {
+    "title": "",
+    "description": "",
+    "created": "2023-07-09T16:18:04.000Z",
+    "updated": "2023-07-09T19:13:14.000Z",
+    "banner": "/api/attachments/no-banner.webp",
+    "tags": [
+      "#nextjs",
+      "#googledrive"
+    ],
     "path": "/works/next-gdrive-index.md"
   }
 ]

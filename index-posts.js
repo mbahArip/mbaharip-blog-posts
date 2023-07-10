@@ -59,7 +59,7 @@ async function run() {
       if(!content) return;
 
       const data = parsePostData(content.data);
-      const slug = parseBlogFileName(file.name);
+      const slug = parseWorkFileName(file.name);
 
       return {
         title: data.metadata.title,

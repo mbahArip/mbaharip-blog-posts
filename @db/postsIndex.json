@@ -1,17 +1,36 @@
 [
   {
-    "banner": "",
-    "tags": "",
-    "path": "/blogs/2023/07/09/210359_first-post"
+    "title": "First posts",
+    "description": "Finally I can implement my own blog using NextJS, Github, and Obsidian. I'm using NextJS as the framework for this website, Github for storing all of...",
+    "created": "2023-07-09T14:02:31.000Z",
+    "updated": "2023-07-10T00:30:03.000Z",
+    "banner": "/api/attachments/banner/630704bf8fd458a5a1b71fc3_thumb.webp",
+    "tags": [],
+    "path": "/works/2023-07-09_21-03-59__first-post.md"
   },
   {
-    "banner": "",
-    "tags": "",
-    "path": "/blogs/2023/07/10/065954_test-banner"
+    "title": "Test Banner",
+    "description": "Lorem ipsum dolor sit amet ehe pero",
+    "created": "2023-07-09T16:18:04.000Z",
+    "updated": "2023-07-10T00:34:14.000Z",
+    "banner": "https://cdn.discordapp.com/attachments/256771512445566976/1127608431973519440/image.png",
+    "tags": [
+      "#nextjs",
+      "#test",
+      "#banner"
+    ],
+    "path": "/works/2023-07-10_06-59-54__test-banner.md"
   },
   {
-    "banner": "",
-    "tags": "",
-    "path": "/blogs/2023/07/10/100421_test-sort"
+    "title": "Lorem ipsum",
+    "description": "this is a random test that i made.",
+    "created": "2023-07-09T16:18:04.000Z",
+    "updated": "2023-07-10T03:16:53.000Z",
+    "banner": "/api/attachments/banner/FqRw62oaQAENmC3.jpg",
+    "tags": [
+      "#test",
+      "#obsidian"
+    ],
+    "path": "/works/2023-07-10_10-04-21__test-sort.md"
   }
 ]
