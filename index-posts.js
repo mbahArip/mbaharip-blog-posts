@@ -161,7 +161,7 @@ function processDescription(markdown) {
     .concat(markdown.length > DESC_LENGTH ? '...' : '');
 }
 function processBanner(fmBanner) {
-  if (!fmBanner) return '/api/attachments/no-banner.webp';
+  if (!fmBanner) return '/no-image.webp';
   let url = '';
   if (/!\[\[([^\]]+)\]\]/g.test(fmBanner)) {
     url = fmBanner.match(/!\[\[([^\]]+)\]\]/)?.[1] ?? 'logo.webp';
