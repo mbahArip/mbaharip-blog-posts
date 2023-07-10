@@ -1,5 +1,4 @@
-
-```dataview
-table title, created, updated, banner, tags
-from "posts"
-```
+---
+created: 2023-07-10T09:59:28+07:00
+updated: 2023-07-10T09:59:28+07:00
+---
