@@ -1,2 +1,0 @@
-isMaintenance::false
-socials
