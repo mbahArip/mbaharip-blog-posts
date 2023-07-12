@@ -7,6 +7,6 @@ tags:
   - tailwindcss
   - nextjs
 createdAt: 2023-07-12T16:14:49+07:00
-updatedAt: 2023-07-12T17:36:50+07:00
+updatedAt: 2023-07-12T23:43:07+07:00
 ---
 this is a random test that i made.

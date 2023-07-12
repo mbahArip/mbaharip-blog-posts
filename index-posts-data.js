@@ -173,7 +173,13 @@ async function runFs() {
         .join(" ")
         .trim();
 
-      // check if tags [ null ], if yes set tags to empty array
+      let thumbnail = markdownData.data.thumbnail ?? "/img/no-image.webp";
+      if (/!\[\[([^\]]+)\]\]/g.test(thumbnail)) {
+        thumbnail = thumbnail.match(/!\[\[([^\]]+)\]\]/)?.[1] ?? "logo.webp";
+        thumbnail = `/api/attachments/banner/${thumbnail}`;
+      } else {
+        thumbnail = thumbnail.replace(/"/g, "").replace(/\\/g, "");
+      }
 
       return {
         title: markdownData.data.title ?? file.replace(".md", "") ?? "untitled",
@@ -184,7 +190,7 @@ async function runFs() {
         updatedAt:
           markdownData.data.updatedAt ??
           moment(Date.now()).format("YYYY-MM-DDTHH:mm:ssZ"),
-        thumbnail: markdownData.data.thumbnail ?? null,
+        thumbnail: thumbnail ?? "/img/no-image.webp",
         thumbnail_y: markdownData.data.thumbnail_y ?? 0.5,
         thumbnail_x: markdownData.data.thumbnail_x ?? 0.5,
         tags,
@@ -222,7 +228,13 @@ async function runFs() {
         .join(" ")
         .trim();
 
-      // check if tags [ null ], if yes set tags to empty array
+      let thumbnail = markdownData.data.thumbnail ?? "/img/no-image.webp";
+      if (/!\[\[([^\]]+)\]\]/g.test(thumbnail)) {
+        thumbnail = thumbnail.match(/!\[\[([^\]]+)\]\]/)?.[1] ?? "logo.webp";
+        thumbnail = `/api/attachments/banner/${thumbnail}`;
+      } else {
+        thumbnail = thumbnail.replace(/"/g, "").replace(/\\/g, "");
+      }
 
       return {
         title: markdownData.data.title ?? file.replace(".md", "") ?? "untitled",
@@ -233,7 +245,7 @@ async function runFs() {
         updatedAt:
           markdownData.data.updatedAt ??
           moment(Date.now()).format("YYYY-MM-DDTHH:mm:ssZ"),
-        thumbnail: markdownData.data.thumbnail ?? null,
+        thumbnail: thumbnail ?? "/img/no-image.webp",
         thumbnail_y: markdownData.data.thumbnail_y ?? 0.5,
         thumbnail_x: markdownData.data.thumbnail_x ?? 0.5,
         tags,
