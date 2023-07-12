@@ -5,12 +5,16 @@ on:
     branches:
       - master
   schedule:
-    - cron: '0 * * * *'
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
   index-data:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pull-requests: write
 
     steps:
       - name: Checkout Repository
@@ -28,5 +32,5 @@ jobs:
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: 'Update posts index'
-          commit_options: '--no-verify'
+          commit_message: "Update posts index"
+          commit_options: "--no-verify"
