@@ -3,9 +3,11 @@
     "title": "First posts",
     "description": "Finally I can implement my own blog using NextJS, Github, and Obsidian. I'm using NextJS as the framework for this website, Github for storing all of...",
     "created": "2023-07-09T14:02:31.000Z",
-    "updated": "2023-07-10T00:30:03.000Z",
+    "updated": "2023-07-12T08:46:39.000Z",
     "banner": "/api/attachments/banner/630704bf8fd458a5a1b71fc3_thumb.webp",
-    "tags": [],
+    "tags": [
+      "null"
+    ],
     "path": "/blogs/2023/07/09/210359_first-post"
   },
   {
