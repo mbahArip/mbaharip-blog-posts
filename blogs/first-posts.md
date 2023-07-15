@@ -6,7 +6,7 @@ thumbnail_y: 0.5
 tags:
   - 
 createdAt: 2023-07-12T16:12:29+07:00
-updatedAt: 2023-07-12T17:37:04+07:00
+updatedAt: 2023-07-16T01:09:57+07:00
 ---
 ![[logo.svg]]
 Finally I can implement my own blog using NextJS, Github, and Obsidian.
@@ -18,3 +18,10 @@ I simply create a API route in nextjs to my github repository, and returning all
 I love notion, but notion are too complex for me, there are too many blocks.
 I love obsidian simplicity and extendibility, since it's basically a markdown notes without extra fancy thing.
 That's why I choose obsidian instead of notion.
+
+## Table of Contents
+
+## Lorem Ipsum
+### Dolor Sit Amet
+## Ehe
+## Pero
