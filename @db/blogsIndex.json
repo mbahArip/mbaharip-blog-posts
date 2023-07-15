@@ -4,7 +4,7 @@
     "summary": "this is a random test that i made.",
     "createdAt": "2023-07-12T09:14:49.000Z",
     "updatedAt": "2023-07-12T16:43:07.000Z",
-    "thumbnail": "/api/attachments/banner/FqRw62oaQAENmC3.jpg",
+    "thumbnail": "@attachments/banner/FqRw62oaQAENmC3.jpg",
     "thumbnail_y": 0.5,
     "thumbnail_x": 0.5,
     "tags": [
@@ -33,7 +33,7 @@
     "summary": "Finally I can implement my own blog using NextJS, Github, and Obsidian. I'm using NextJS as the framework for this website, Github for storing all of the blog posts, and Obsidian as editor for the blogs.",
     "createdAt": "2023-07-12T09:12:29.000Z",
     "updatedAt": "2023-07-12T10:37:04.000Z",
-    "thumbnail": "/api/attachments/banner/630704bf8fd458a5a1b71fc3_thumb.webp",
+    "thumbnail": "@attachments/banner/630704bf8fd458a5a1b71fc3_thumb.webp",
     "thumbnail_y": 0.5,
     "thumbnail_x": 0.5,
     "tags": [],
