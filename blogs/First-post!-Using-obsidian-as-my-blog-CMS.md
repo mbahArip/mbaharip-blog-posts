@@ -1,6 +1,6 @@
 ---
 title: First post! Using obsidian as my blog CMS
-thumbnail: "![[23d4uj90mp.jpg]]"
+thumbnail: "![[dfuj8iko9ru902345.png]]"
 thumbnail_x: 0.5
 thumbnail_y: 0.524
 tags:
@@ -9,11 +9,10 @@ tags:
   - blog
   - workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-16T23:48:40+07:00
+updatedAt: 2023-07-17T00:27:45+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.
-
 For this first post, I'll explaining how I use Obsidian as my blogs CMS.
 
 ## Table of Contents
