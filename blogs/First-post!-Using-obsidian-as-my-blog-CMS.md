@@ -1,12 +1,15 @@
 ---
 title: First post! Using obsidian as my blog CMS
-thumbnail: 
+thumbnail: "![[23d4uj90mp.jpg]]"
 thumbnail_x: 0.5
-thumbnail_y: 0.5
+thumbnail_y: 0.524
 tags:
-  - 
+  - obsidian
+  - github
+  - blog
+  - workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-16T23:45:08+07:00
+updatedAt: 2023-07-16T23:48:40+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.
@@ -36,7 +39,7 @@ Here are list of obsidian plugins that i use:
 - **Pieces**, a snippets manager, I've been using it for couple months and it help me to create a repeated code like `prisma client` whenever I create a new project.
 - **Templater**, I'm using this one to create a dialog whenever I want to create a new note, it will ask me what the title and is it a blog or project, then it will create a new note based on the title on respective folder.
 
-### Folder / Vault structure
+### Folder / Vault Structure
 For folder structure, I differentiate between blog and work/project posts.
 Here are my folder / vault structure:
 - **@attachments**, this folder will contains all the attachment used on notes.
@@ -48,8 +51,8 @@ Here are my folder / vault structure:
 
 
 
-## Into code!
-### Fetching the notes
+## Into Code!
+### Fetching the Notes
 So I've my obsidian environment ready, and I need to think how can I get these notes content into my website. The answer is... **Octokit**! Github SDK that I can use to get contents from my posts repository.
 
 At first, this is the flow I can think of.
@@ -58,7 +61,7 @@ But after trying to implement it, it doesn't good enough for me since it's slow,
 At first I think i would use naming format like `YYYY-MM-DD_HH-mm-ss__filename.md` which is doesn't look good, and it still doesn't fix the time and request problem.
 So i think about why don't I index the whole notes?
 
-### Indexing notes
+### Indexing Notes
 "Doesn't it still consume lot request?", "Won't the indexing slowing down the request?" is what I'm asking myself.
 Then I remember that Github provide Actions where it can update a file inside repository. (NOTE: I never use Github Actions before, so at the moment I don't know if it would work or not)
 
@@ -70,7 +73,7 @@ From 1 - 3 seconds everytime I run the script, it goes to 15ms - 30ms.
 
 Now the problem with getting all the files with it's metadata is solved.
 It's fast, it's only consume 1 request to octokit, and I could sort and search the notes based on it's file name, or tags.
-### Implementing into website
+### Implementing into Website
 After implementing index for notes, now I can create API route to fetch the posts.
 
 On the API route, I also implement `keyword`, `page`, and `perPage` query.
@@ -81,6 +84,7 @@ On the `/blogs` and `/works` page, I just need to fetch the posts, then show it.
 
 
 
+---
 
 I think that's it. If you want to see the whole process, you can check posts [repository](https://github.com/mbahArip/mbaharip-blog-posts/).
 Thank you for reading! I hope you like my first posts.
