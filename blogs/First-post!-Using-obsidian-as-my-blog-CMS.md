@@ -9,13 +9,11 @@ tags:
   - blog
   - workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-17T00:27:45+07:00
+updatedAt: 2023-07-17T02:36:24+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.
 For this first post, I'll explaining how I use Obsidian as my blogs CMS.
-
-## Table of Contents
 
 ## Why Obsidian?
 For the past year, I have been using couple of different note-taking apps such as **Notion**, **ClickUp**, **OneNote**, and **Obsidian**. I even tried to create my own note-taking apps for my Study Independent assignment called [Notekake](https://github.com/mbahArip/mini-project-notokake), but I don't have enough motivation to improving it.
@@ -25,7 +23,6 @@ At first, I want to use notion since there already a library called `react-notio
 ## Obsidian Environment
 ### Obsidian Plugins
 One of many reason i choose obsidian is because it's extendability, you can find a lot of community plugins that could help your productivity or making it's easier to use.
-
 Here are list of obsidian plugins that i use:
 - **Advance table**, I use it to format the tables if I need one.
 - **Banners**, this plugin add banners to top of the notes, and I use it for thumbnail of the notes.
@@ -38,6 +35,7 @@ Here are list of obsidian plugins that i use:
 - **Pieces**, a snippets manager, I've been using it for couple months and it help me to create a repeated code like `prisma client` whenever I create a new project.
 - **Templater**, I'm using this one to create a dialog whenever I want to create a new note, it will ask me what the title and is it a blog or project, then it will create a new note based on the title on respective folder.
 
+
 ### Folder / Vault Structure
 For folder structure, I differentiate between blog and work/project posts.
 Here are my folder / vault structure:
@@ -47,8 +45,6 @@ Here are my folder / vault structure:
 - **blogs**, contains all notes that will show up on `/blogs` page.
 - **works**, contains all notes that will show up on `/works` page.
 - **settings.md**, extra settings that contains thing on web that I want to change easily.
-
-
 
 ## Into Code!
 ### Fetching the Notes
