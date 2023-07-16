@@ -1,5 +1,16 @@
 [
   {
+    "title": "Lorem ipsum",
+    "summary": "Test url banner",
+    "createdAt": "2023-07-16T17:13:25.000Z",
+    "updatedAt": "2023-07-16T17:14:16.000Z",
+    "thumbnail": "@url/cdn.discordapp.com/attachments/256771512445566976/1130165925186899998/FB_IMG_1689522921844.jpg",
+    "thumbnail_y": 0.5,
+    "thumbnail_x": 0.5,
+    "tags": [],
+    "path": "/blogs/lorem-ipsum"
+  },
+  {
     "title": "First post! Using obsidian as my blog CMS",
     "summary": "Hello all! I finally have enough motivation to creating my own portfolio website. I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.",
     "createdAt": "2023-07-16T12:33:46.000Z",
@@ -7,12 +18,7 @@
     "thumbnail": "@attachments/banner/23d4uj90mp.jpg",
     "thumbnail_y": 0.524,
     "thumbnail_x": 0.5,
-    "tags": [
-      "obsidian",
-      "github",
-      "blog",
-      "workflow"
-    ],
+    "tags": ["obsidian", "github", "blog", "workflow"],
     "path": "/blogs/First-post!-Using-obsidian-as-my-blog-CMS"
   }
 ]
