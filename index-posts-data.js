@@ -41,7 +41,7 @@ async function runFs() {
         .join(" ")
         .trim();
 
-      let thumbnail = markdownData.data.thumbnail ?? "/img/no-image.webp";
+      let thumbnail = markdownData.data.thumbnail ?? "/img/banner.webp";
       if (/!\[\[([^\]]+)\]\]/g.test(thumbnail)) {
         thumbnail = thumbnail.match(/!\[\[([^\]]+)\]\]/)?.[1] ?? "logo.webp";
         thumbnail = `@attachments/banner/${thumbnail}`;
@@ -58,7 +58,7 @@ async function runFs() {
         updatedAt:
           markdownData.data.updatedAt ??
           moment(Date.now()).format("YYYY-MM-DDTHH:mm:ssZ"),
-        thumbnail: thumbnail ?? "/img/no-image.webp",
+        thumbnail: thumbnail ?? "/img/banner.webp",
         thumbnail_y: markdownData.data.thumbnail_y ?? 0.5,
         thumbnail_x: markdownData.data.thumbnail_x ?? 0.5,
         tags,
@@ -96,7 +96,7 @@ async function runFs() {
         .join(" ")
         .trim();
 
-      let thumbnail = markdownData.data.thumbnail ?? "/img/no-image.webp";
+      let thumbnail = markdownData.data.thumbnail ?? "/img/banner.webp";
       if (/!\[\[([^\]]+)\]\]/g.test(thumbnail)) {
         thumbnail = thumbnail.match(/!\[\[([^\]]+)\]\]/)?.[1] ?? "logo.webp";
         thumbnail = `@attachments/banner/${thumbnail}`;
@@ -113,7 +113,7 @@ async function runFs() {
         updatedAt:
           markdownData.data.updatedAt ??
           moment(Date.now()).format("YYYY-MM-DDTHH:mm:ssZ"),
-        thumbnail: thumbnail ?? "/img/no-image.webp",
+        thumbnail: thumbnail ?? "/img/banner.webp",
         thumbnail_y: markdownData.data.thumbnail_y ?? 0.5,
         thumbnail_x: markdownData.data.thumbnail_x ?? 0.5,
         tags,
