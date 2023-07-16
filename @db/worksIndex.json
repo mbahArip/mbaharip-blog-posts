@@ -7,7 +7,10 @@
     "thumbnail": "@local/img/banner.webp",
     "thumbnail_y": 0.5,
     "thumbnail_x": 0.5,
-    "tags": ["nextjs", "googledrive"],
+    "tags": [
+      "nextjs",
+      "googledrive"
+    ],
     "path": "/works/next-gdrive-index"
   }
 ]
