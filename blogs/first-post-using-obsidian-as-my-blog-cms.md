@@ -5,7 +5,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.524
 tags: obsidian, github, blog, workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-18T02:48:00+07:00
+updatedAt: 2023-07-18T02:48:46+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.  
@@ -56,13 +56,13 @@ Here are my folder / vault structure:
 | **blogs**               | This folder contains all posts for my blogs. It could be a random note, explaining how I do thing, daily life, or anything.                       |
 | **works**               | This folder contains all posts for my works. It will be showcasing the works / project I've done with screens, repository, or even live demo.     |
 | **index-posts-data.js**\** | This file contains logic functions where it would format the posts into array of JSON. Will be executed everytime I push thing into repository.   | 
-| **settings.md**         | This file contains extra settings that I'll use to update small thing on my website. Like what I'm working on, etc.                               |  
+| **settings.md**         | This file contains extra settings that I'll use to update small thing on my website. Like what I'm working on, etc.                               |    
 *\* I will explain what is index database later.*  
 *\*\* Why don't I group this into the scripts folder? IDK* 
 
-## First wall of problems: Getting the notes
-After explaining about Obsidian, now I will explaining about problems that I have while implementing this into my website.
-Before I actually implementing this, I think that I could use Octokit to fetch all the note files, then show it on the websites.
+## First Wall of Problems: Getting the Notes
+After explaining about Obsidian, now I will explaining about problems that I have while implementing this into my website.  
+Before I actually implementing this, I think that I could use Octokit to fetch all the note files, then show it on the websites.  
 While it actually works, there are couple problems.
 
 If I can list the problems, it would be:
@@ -72,41 +72,41 @@ If I can list the problems, it would be:
 - How to get attached file
 - Attachments are huge
 
-### getContents of the notes folder
+### getContents of the Notes Folder
 > **Disclaimer:** The test are tested on my local machine
 
-By fetching the notes folder, the response from `octokit` that I could use only `name`, and `path`.
-![[img-first-post-using-obsidian-as-my-blog-cms.png]]
+By fetching the notes folder, the response from `octokit` that I could use only `name`, and `path`.  
+![[img-first-post-using-obsidian-as-my-blog-cms.png]]  
 It looks good enough, but **I can't search by tags, or sort it** since all the metadata is inside the hashed `content` which can only be retrieved by sending a request to the file path.
-##### Why don't you loop every file and get the contents of the note?
-I've tried this inside NextJS API route. While it works, the response time are not great.
+##### Why Don't You Loop Every File and Get the Contents of the Note?
+I've tried this inside NextJS API route. While it works, the response time are not great.  
 ![[img-first-post-using-obsidian-as-my-blog-cms-1.png]]
 
-For 3 notes that I test, it took 1.5 - 2s and 4 requests sent to get all the notes inside the folder.
-Imagine if I have more than hundred of notes?
+For 3 notes that I test, it took 1.5 - 2s and 4 requests sent to get all the notes inside the folder.  
+Imagine if I have more than hundred of notes?  
 So I scrap this logic, and trying to find new way to get all the notes, with search and sort capabilities.***
 
-### Index all the notes into one file
-After couple of stupid ideas, I remember that Github could run a workflow on schedule, manual run, or when I push thing into the repository.
+### Index All the Notes into One File
+After couple of stupid ideas, I remember that Github could run a workflow on schedule, manual run, or when I push thing into the repository.  
 *"Why don't I create a single file that contains all the notes with it's metadata?"* is what I'm thinking.
 
-#### Script #1 - The base of the indexing script
-For the first scripts I actually just copying the previous code from API route into this JS, and output it into a JSON file.
-![[img-first-post-using-obsidian-as-my-blog-cms-2.png]]
-It still takes time, but hey.. it only happen once.
+#### Script #1 - The Base of the Indexing Script
+For the first scripts I actually just copying the previous code from API route into this JS, and output it into a JSON file.  
+![[img-first-post-using-obsidian-as-my-blog-cms-2.png]]  
+It still takes time, but hey.. it only happen once.  
 After the JSON file created, I can fetch it with around 300 - 500ms response time, and I also can **search by tags** and **sort it by last updated**.
 
-#### Script #2 - Improve the speed of indexing script
-After trying to push couple of test notes, I noticed the indexing speed would take a long long time.
-I discussed this problem with couple of my friends, and 1 of my friends told me that *I could use fs instead of `octokit`*.
-So I rewrite the indexing scripts using fs.
-![[img-first-post-using-obsidian-as-my-blog-cms-3.png]]
-And thanks to my friend, it actually improve the speed a lot.
+#### Script #2 - Improve the Speed of Indexing Script
+After trying to push couple of test notes, I noticed the indexing speed would take a long long time.  
+I discussed this problem with couple of my friends, and 1 of my friends told me that *I could use fs instead of `octokit`*.  
+So I rewrite the indexing scripts using fs.  
+![[img-first-post-using-obsidian-as-my-blog-cms-3.png]]  
+And thanks to my friend, it actually improve the speed a lot.  
 From 2 - 3 seconds to only 20 - 40ms.
 
 ---
 
-With this i solve my problems regarding **searching** and **sorting.**
+With this i solve my problems regarding **searching** and **sorting.**  
 So I need to find a way to get the attachment, and have it inside the post.
 - ~~Search notes by tags~~
 - ~~Sort notes by latest update~~
@@ -114,27 +114,27 @@ So I need to find a way to get the attachment, and have it inside the post.
 - How to get attached file
 - Attachments are huge
 
-## Breaking the second wall of problems: Get the attachments
+## Breaking the Second Wall of Problems: Get the Attachments
 If I could break this problems into smaller pieces, it would be:
 - How get the attachments file?
 - How to render it inside the post?
 
-### Get the attachments
-There nothing special in here.
-I just get the file name, then add attachment folder into the path.
+### Get the Attachments
+There nothing special in here.  
+I just get the file name, then add attachment folder into the path.  
 Something like this `@attachments/[attachment name]`, then use it as path for `octokit` to fetch.
 
-But, what if I use external links instead of attachment file?
-Easy, just add a guard to check if it contains `http` or not.
+But, what if I use external links instead of attachment file?  
+Easy, just add a guard to check if it contains `http` or not.  
 ![[img-first-post-using-obsidian-as-my-blog-cms-6.png]]
 
 With this, I solve the problems about **how to get the attachments file**.
 
-### But how to render it inside the post?
-> If any of you also want to use obsidian as CMS, there are remarks extension that could parse `wikilinks`.
+### But how to Render it inside the Post?
+> If any of you also want to use obsidian as CMS, there are remarks extension that could parse `wikilinks`.  
 > I just found out about this after I implement my own solution.
 
-Since obsidian are using `wikilinks` tag, I need to convert this to `markdown` tag.
+Since obsidian are using `wikilinks` tag, I need to convert this to `markdown` tag.  
 My solution to this problem is by taking the markdown content, then replacing all the `wikilinks` with `markdown` tag.
 ```ts
 import matter from 'gray-matter'
@@ -167,7 +167,7 @@ markdownContent = markdownContent.replace(
 );
 ```
 ---
-Now the problems with getting the attachment file is solved.
+Now the problems with getting the attachment file is solved.  
 Only one more problems to solve.
 - ~~Search notes by tags~~
 - ~~Sort notes by latest update~~
@@ -175,33 +175,33 @@ Only one more problems to solve.
 - ~~How to get attached file~~
 - Attachments are huge
 
-## Last problem: Optimization
-I kinda hate when I want to open an article that contains a lot of image, some of the images are not loaded yet.
-Well, I would blame my internet provider for this.
+## Last Problem: Optimization
+I kinda hate when I want to open an article that contains a lot of image, some of the images are not loaded yet.  
+Well, I would blame my internet provider for this.  
 But having optimized images on your website is not a bad idea, right?
 
 ### Trying `node-canvas`
-Since it will be running on Serverless invocation, I can't use canvas.
+Since it will be running on Serverless invocation, I can't use canvas.  
 Some people on Github are recommending to use this library instead.
 
-The flow are quite simple and it run smoothly on my local machine.
+The flow are quite simple and it run smoothly on my local machine.  
 ![[img-first-post-using-obsidian-as-my-blog-cms-10.png]]
 
-But when I tried to deploy it to Vercel, it throws a runtime error.
-Why? `libuuid.so.1: cannot open shared object file: No such file or directory`
+But when I tried to deploy it to Vercel, it throws a runtime error.  
+Why? `libuuid.so.1: cannot open shared object file: No such file or directory`  
 Couple people also get the same error, so i give up using this library.
 
-### Sharp to the rescue
-With swaping the canvas to sharp, I could make the code shorter.
-I don't need to create a new canvas, draw the image, or all the hasle with resizing the image.
-Since i only need to call sharp with image buffer, inserting user query, and done.
-![[img-first-post-using-obsidian-as-my-blog-cms-11.png]]
+### Sharp to the Rescue
+With swaping the canvas to sharp, I could make the code shorter.  
+I don't need to create a new canvas, draw the image, or all the hasle with resizing the image.  
+Since i only need to call sharp with image buffer, inserting user query, and done.  
+![[img-first-post-using-obsidian-as-my-blog-cms-11.png]]  
 It work perfectly, compress + resize 993KB image to only 40KB on 1024px width and 75 webp quality.
 
-![[img-first-post-using-obsidian-as-my-blog-cms-12.png]]
+![[img-first-post-using-obsidian-as-my-blog-cms-12.png]]  
 ![[img-first-post-using-obsidian-as-my-blog-cms-13.png]]
 
-There a spike of ~100ms response time, but we can save like 90% of the bandwidth.
+There a spike of ~100ms response time, but we can save like 90% of the bandwidth.  
 Since we don't need full resolution image for thumbnail, or banner on the post page.
 
 With this, all my problems are solved.
