@@ -5,7 +5,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.524
 tags: obsidian, github, blog, workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-18T00:00:25+07:00
+updatedAt: 2023-07-18T01:45:08+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.  
@@ -57,10 +57,67 @@ Here are my folder / vault structure:
 | **works**               | This folder contains all posts for my works. It will be showcasing the works / project I've done with screens, repository, or even live demo.     |
 | **index-posts-data.js**\** | This file contains logic functions where it would format the posts into array of JSON. Will be executed everytime I push thing into repository.   | 
 | **settings.md**         | This file contains extra settings that I'll use to update small thing on my website. Like what I'm working on, etc.                               |  
-\* I will explain what is index database later.  
-\** Why don't I group this into the scripts folder? IDK 
+*\* I will explain what is index database later.*  
+*\*\* Why don't I group this into the scripts folder? IDK* 
 
-## Getting the notes for the website
+## First wall of problems: Getting the notes
+After explaining about Obsidian, now I will explaining about problems that I have while implementing this into my website.
+Before I actually implementing this, I think that I could use Octokit to fetch all the note files, then show it on the websites.
+While it actually works, there are couple problems.
+
+If I can list the problems, it would be:
+- Search notes by tags
+- Sort notes by latest update
+- Slow response time
+- How to get attached file
+- Attachments are huge
+
+### getContents of the notes folder
+> **Disclaimer:** The test are tested on my local machine
+
+By fetching the notes folder, the response from `octokit` that I could use only `name`, and `path`.
+![[img-first-post-using-obsidian-as-my-blog-cms.png]]
+It looks good enough, but **I can't search by tags, or sort it** since all the metadata is inside the hashed `content` which can only be retrieved by sending a request to the file path.
+##### Why don't you loop every file and get the contents of the note?
+I've tried this inside NextJS API route. While it works, the response time are not great.
+![[img-first-post-using-obsidian-as-my-blog-cms-1.png]]
+
+For 3 notes that I test, it took 1.5 - 2s and 4 requests sent to get all the notes inside the folder.
+Imagine if I have more than hundred of notes?
+So I scrap this logic, and trying to find new way to get all the notes, with search and sort capabilities.***
+
+### Index all the notes into one file
+After couple of stupid ideas, I remember that Github could run a workflow on schedule, manual run, or when I push thing into the repository.
+*"Why don't I create a single file that contains all the notes with it's metadata?"* is what I'm thinking.
+
+#### Script #1 - The base of the indexing script
+For the first scripts I actually just copying the previous code from API route into this JS, and output it into a JSON file.
+![[img-first-post-using-obsidian-as-my-blog-cms-2.png]]
+It still takes time, but hey.. it only happen once.
+After the JSON file created, I can fetch it with around 300 - 500ms response time, and I also can **search by tags** and **sort it by last updated**.
+
+#### Script #2 - Improve the speed of indexing script
+After trying to push couple of test notes, I noticed the indexing speed would take a long long time.
+I discussed this problem with couple of my friends, and 1 of my friends told me that *I could use fs instead of `octokit`*.
+So I rewrite the indexing scripts using fs.
+![[img-first-post-using-obsidian-as-my-blog-cms-3.png]]
+And thanks to my friend, it actually improve the speed a lot.
+From 2 - 3 seconds to only 20 - 40ms.
+
+---
+
+With this i solve my problems regarding **searching** and **sorting.**
+So I need to find a way to get the attachment, and have it inside the post.
+- ~~Search notes by tags~~
+- ~~Sort notes by latest update~~
+- ~~Slow response time~~
+- How to get attached file
+- Attachments are huge
+
+## Breaking the second wall of problems: Get the attachments
+If you think about it, it would be easy.
+I could just get the file name, then add the folder name.
+Something like this `https://api.github.com/`
 
 ## Into Code!
 ### Fetching the Notes
