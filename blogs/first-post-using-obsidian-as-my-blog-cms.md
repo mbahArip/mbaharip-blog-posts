@@ -5,7 +5,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.524
 tags: obsidian, github, blog, workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-18T02:41:58+07:00
+updatedAt: 2023-07-18T02:48:00+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.  
@@ -212,4 +212,4 @@ With this, all my problems are solved.
 - ~~Attachments are huge~~
 
 ---
-## C
+## Conclusion
