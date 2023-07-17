@@ -5,7 +5,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.076
 tags: obsidian, github, blog, workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-18T03:00:50+07:00
+updatedAt: 2023-07-18T03:18:26+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.  
@@ -57,6 +57,7 @@ Here are my folder / vault structure:
 | **works**               | This folder contains all posts for my works. It will be showcasing the works / project I've done with screens, repository, or even live demo.     |
 | **index-posts-data.js**\** | This file contains logic functions where it would format the posts into array of JSON. Will be executed everytime I push thing into repository.   | 
 | **settings.md**         | This file contains extra settings that I'll use to update small thing on my website. Like what I'm working on, etc.                               |      
+
 *\* I will explain what is index database later.*  
 *\*\* Why don't I group this into the scripts folder? IDK* 
 
