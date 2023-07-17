@@ -2,10 +2,10 @@
 title: First post! Using obsidian as my blog CMS
 thumbnail: "![[dfuj8iko9ru902345.png]]"
 thumbnail_x: 0.5
-thumbnail_y: 0.524
+thumbnail_y: 0.076
 tags: obsidian, github, blog, workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-18T02:48:46+07:00
+updatedAt: 2023-07-18T03:00:50+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.  
@@ -56,7 +56,7 @@ Here are my folder / vault structure:
 | **blogs**               | This folder contains all posts for my blogs. It could be a random note, explaining how I do thing, daily life, or anything.                       |
 | **works**               | This folder contains all posts for my works. It will be showcasing the works / project I've done with screens, repository, or even live demo.     |
 | **index-posts-data.js**\** | This file contains logic functions where it would format the posts into array of JSON. Will be executed everytime I push thing into repository.   | 
-| **settings.md**         | This file contains extra settings that I'll use to update small thing on my website. Like what I'm working on, etc.                               |    
+| **settings.md**         | This file contains extra settings that I'll use to update small thing on my website. Like what I'm working on, etc.                               |      
 *\* I will explain what is index database later.*  
 *\*\* Why don't I group this into the scripts folder? IDK* 
 
@@ -211,5 +211,18 @@ With this, all my problems are solved.
 - ~~How to get attached file~~
 - ~~Attachments are huge~~
 
----
 ## Conclusion
+The reason I use **Obsidian** as my blog CMS is because it's using markdown, which I always use, and also there are a lot of community plugins that can be used to extend obsidian. I have couple of problems implementing this into my website, the problem is:
+- I can't search notes by tags
+- I can't sort the notes
+- Slow response time
+- How can I get attached file?
+- Attachment size are too large
+
+To solve the first 3 problems, I implement a Github Actions that would indexing all the notes into JSON files containing all the metadata. With this, I could search the notes by tags, sort the notes by latest update, and speed up the response time.  
+For getting the attached file, I simply get the attachment name then fetch the attachment using `octokit`. But to make it actually render on the page, I need to replaceAll the `wikilinks` tag into `markdown` tag using regex.  
+To compress the attachment size, I'm using `sharp` to resize the image and convert it to webp. With this I could compress the size of the image up to 90%.
+
+---
+Thank you for reading my long first post.  
+Hope this post can inspire you.
