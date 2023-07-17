@@ -11,6 +11,8 @@
       "nextjs",
       "googledrive"
     ],
-    "path": "/works/next-gdrive-index"
+    "path": "/works/next-gdrive-index",
+    "repositoryUrl": "https://github.com/mbaharip/next-gdrive-index",
+    "demoUrl": "https://drive.mbaharip.com"
   }
 ]
