@@ -5,7 +5,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.524
 tags: obsidian, github, blog, workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-17T23:45:03+07:00
+updatedAt: 2023-07-18T00:00:25+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.  
@@ -42,20 +42,25 @@ Here are list of obsidian plugins that I use:
 | **Pieces**              | Pieces is a plugin that help me to sync all my snippets between apps. I could save a code block from my browser, then use it later in my VSCode or WebStorm. It really help me if I want to insert repetative code like hooks, library client, etc.                         |
 | **Templater**           | I'm using this plugin to create a default template for note posts, I make it a script so when I create a new note, it will ask me the title, and in which category I want to put it (blogs / works). Then it will create a note based on the title in blogs / works folder. | 
 
-### Folder Structure: Keep my vault organized
+### Folder Structure: Keep My Vault Organized
 For folder structure, I differentiate between blog and work/project posts, attachment, and index database to keep it clean.  
 Here are my folder / vault structure:
 
-| Folder name      | What does this folder contain?                                            |
-| ---------------- | ------------------------------------------------------------------------- |
-| **@attachments** | This folder contains all attachments like pasted image, file, and banner. |
-| **@db**          | This folder contains indexed notes in JSON                                                                          |
-- **@attachments**, this folder will contains all the attachment used on notes.
-- **@db**, this folder will contains indexed notes (I'll explain it later).
-- **@templates**, contains template that will be used by Templater plugin.
-- **blogs**, contains all notes that will show up on `/blogs` page.
-- **works**, contains all notes that will show up on `/works` page.
-- **settings.md**, extra settings that contains thing on web that I want to change easily.
+| Folder / file name      | What does this folder contain?                                                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **.github/workflows**   | This folder contains Github Actions workflows to update indexed notes everytime I push thing into repository.                                     |
+| **node_modules**\**        | I don't think I need to explain this. 🤷‍♂️                                                                                                       |
+| **@attachments**        | This folder contains all attachments like pasted image, file, and banner.                                                                         |
+| **@db**                 | This folder contains indexed notes* in JSON format.                                                                                               |
+| **@templates**          | This folder contains `templater` notes template. I've add it into `.gitignore` since everyone should have their preffered own metadata structure. |
+| **blogs**               | This folder contains all posts for my blogs. It could be a random note, explaining how I do thing, daily life, or anything.                       |
+| **works**               | This folder contains all posts for my works. It will be showcasing the works / project I've done with screens, repository, or even live demo.     |
+| **index-posts-data.js**\** | This file contains logic functions where it would format the posts into array of JSON. Will be executed everytime I push thing into repository.   | 
+| **settings.md**         | This file contains extra settings that I'll use to update small thing on my website. Like what I'm working on, etc.                               |  
+\* I will explain what is index database later.  
+\** Why don't I group this into the scripts folder? IDK 
+
+## Getting the notes for the website
 
 ## Into Code!
 ### Fetching the Notes
