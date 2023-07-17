@@ -99,6 +99,8 @@ function process(data, category) {
         thumbnail_x: markdownData.data.thumbnail_x ?? 0.5,
         tags,
         path: `/${category}/${file.replace(".md", "")}`,
+        repositoryUrl: markdownData.data.repositoryUrl ?? undefined,
+        demoUrl: markdownData.data.demoUrl ?? undefined,
       };
     })
   );
