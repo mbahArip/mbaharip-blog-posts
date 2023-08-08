@@ -1,16 +1,13 @@
 [
   {
     "title": "next-gdrive-index",
-    "summary": "lorem ipsum dolor sit amet",
+    "summary": "![next-gdrive-index](./public/og.png)  Status",
     "createdAt": "2023-07-09T16:05:45.000Z",
-    "updatedAt": "2023-07-17T00:46:39.000Z",
+    "updatedAt": "2023-08-08T09:11:42.000Z",
     "thumbnail": "@local/img/banner.webp",
     "thumbnail_y": 0.5,
     "thumbnail_x": 0.5,
-    "tags": [
-      "nextjs",
-      "googledrive"
-    ],
+    "tags": [],
     "path": "/works/next-gdrive-index",
     "repositoryUrl": "https://github.com/mbaharip/next-gdrive-index",
     "demoUrl": "https://drive.mbaharip.com"
