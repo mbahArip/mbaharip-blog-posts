@@ -5,7 +5,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.664
 tags: nextjs, googledrive
 createdAt: 2023-07-09T23:05:45+07:00
-updatedAt: 2023-08-08T19:10:28+07:00
+updatedAt: 2023-08-08T19:57:15+07:00
 demoUrl: https://drive.mbaharip.com
 repositoryUrl: https://github.com/mbaharip/next-gdrive-index
 ---

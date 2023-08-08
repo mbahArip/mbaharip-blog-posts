@@ -1,13 +1,18 @@
 [
   {
     "title": "First post! Using obsidian as my blog CMS",
-    "summary": "Hello all! I finally have enough motivation to creating my own portfolio website.   I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.   For this first post, I'll explaining how I use Obsidian as my blogs CMS.",
+    "summary": "Hello all! I finally have enough motivation to creating my own portfolio website. I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker. For this first post, I'll explaining how I use Obsidian as my blogs CMS. Why Obsidian?",
     "createdAt": "2023-07-16T12:33:46.000Z",
     "updatedAt": "2023-08-08T12:05:47.000Z",
     "thumbnail": "@attachments/banner/dfuj8iko9ru902345.png",
     "thumbnail_y": 0.288,
     "thumbnail_x": 0.5,
-    "tags": [],
+    "tags": [
+      "obsidian",
+      "github",
+      "blog",
+      "workflow"
+    ],
     "path": "/blogs/first-post-using-obsidian-as-my-blog-cms"
   }
 ]

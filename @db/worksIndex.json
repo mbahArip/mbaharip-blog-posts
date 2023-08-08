@@ -1,13 +1,16 @@
 [
   {
     "title": "next-gdrive-index",
-    "summary": "Status",
+    "summary": "Status Basic features are working now, can be used for daily use. You can check the demo [here](https://drive.mbaharip.com).",
     "createdAt": "2023-07-09T16:05:45.000Z",
-    "updatedAt": "2023-08-08T12:10:28.000Z",
+    "updatedAt": "2023-08-08T12:57:15.000Z",
     "thumbnail": "@attachments/banner/img-next-gdrive-index-2 1.png",
     "thumbnail_y": 0.664,
     "thumbnail_x": 0.5,
-    "tags": [],
+    "tags": [
+      "nextjs",
+      "googledrive"
+    ],
     "path": "/works/next-gdrive-index",
     "repositoryUrl": "https://github.com/mbaharip/next-gdrive-index",
     "demoUrl": "https://drive.mbaharip.com"
