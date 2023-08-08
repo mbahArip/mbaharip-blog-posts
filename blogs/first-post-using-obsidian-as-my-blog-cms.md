@@ -2,10 +2,10 @@
 title: First post! Using obsidian as my blog CMS
 thumbnail: "![[dfuj8iko9ru902345.png]]"
 thumbnail_x: 0.5
-thumbnail_y: 0.076
+thumbnail_y: 0.288
 tags: obsidian, github, blog, workflow
 createdAt: 2023-07-16T19:33:46+07:00
-updatedAt: 2023-07-18T03:18:26+07:00
+updatedAt: 2023-08-08T19:05:47+07:00
 ---
 Hello all! I finally have enough motivation to creating my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and improve my English. Since I'm not a native English speaker.  

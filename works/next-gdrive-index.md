@@ -1,16 +1,15 @@
 ---
-title: 
-thumbnail: 
+title: next-gdrive-index
+thumbnail: "![[img-next-gdrive-index-2 1.png]]"
 thumbnail_x: 0.5
-thumbnail_y: 0.5
+thumbnail_y: 0.664
 tags: nextjs, googledrive
 createdAt: 2023-07-09T23:05:45+07:00
-updatedAt: 2023-08-08T16:11:42+07:00
+updatedAt: 2023-08-08T19:10:28+07:00
 demoUrl: https://drive.mbaharip.com
 repositoryUrl: https://github.com/mbaharip/next-gdrive-index
 ---
-![next-gdrive-index](./public/og.png)
-
+![[img-next-gdrive-index-2.png]]
 ## Status
 
 Basic features are working now, can be used for daily use.  
@@ -69,8 +68,6 @@ You can override the folder OpenGraph image by uploading `.banner.(png/jpg/jpeg/
 
 ## Credits
 - [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index) by SpencerWooo for the inspiration and also some file type helpers.
-
----
 
 ## Known Issues
 - ~~Fetching files from Google Drive API take too much time, it triggers 504 Error on Vercel.~~
