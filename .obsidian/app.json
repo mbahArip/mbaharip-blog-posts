@@ -1,0 +1,10 @@
+{
+  "promptDelete": false,
+  "showLineNumber": false,
+  "tabSize": 4,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "attachments",
+  "propertiesInDocument": "visible",
+  "spellcheck": true
+}
