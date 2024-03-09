@@ -1,44 +1,48 @@
-<%*  
-const title = await tp.system.prompt("Enter post title:", "", true);
-
+<%*
+// Ask for a title and cancel if it's empty
+const title = await tp.system.prompt("Enter post title:", true);
 if(!title) return;
 
-const type = ["Articles", "Projects"];  
-const postFolder = app.vault.getAbstractFileByPath("posts/articles");  
-const workFolder = app.vault.getAbstractFileByPath("posts/projects");  
-const typeFolder = [ postFolder, workFolder ];  
-const folder = await tp.system.suggester(type, typeFolder)
+// Ask for post type
+const articlesFolder = app.vault.getAbstractFileByPath("posts/articles");
+const projectsFolder = app.vault.getAbstractFileByPath("posts/projects");
+const typeName = ["Articles", "Projects"];
+const typeValue = [articlesFolder, projectsFolder];
 
+const folder = await tp.system.suggester(typeName, typeValue);
 if(!folder) return;
-console.log(folder)
-const timestamp = tp.date.now("YYYY-MM-DDTHH:mm:ssZ");  
-const date = tp.date.now("YYYY-MM-DD_HH-mm-ss");
 
-let name = title.trim().replace(/[^a-zA-Z0-9 ]/g, '').replaceAll(' ', '-').toLowerCase();  
-const filePath = tp.obsidian.normalizePath(`${folder.path}/${name}.md`)
+// Basic metadata
+const slug = title.trim().replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, ' ').replace(/\s/g, '-').toLowerCase();
+const timestamp = tp.date.now("YYYY-MM-DDTHH:mm:ssZ");
 
+// Check if already exists
+const filePath = tp.obsidian.normalizePath(`${folder.path}/${slug}.md`);
 if(await tp.file.exists(filePath)) {
-	new Notice("File already exists!", 8000).noticeEl.innerHTML = `<b>Templater Error</b>:<br/>${folder.name} with the same name already exist!`
+	new Notice("",8000).noticeEl.innerHTML = `<b>Templater Error</b>:<br/>${folder.name} with the same title already exists.`;
 	return;
 }
 
-await tp.file.create_new("", name, true, folder);
+// Create the file
+await tp.file.create_new("", slug, true, folder);
 
+// Insert metadata after creating the file
 tp.hooks.on_all_templates_executed(async () => {
 	const file = tp.file.find_tfile(tp.file.path(true));
-	await app.fileManager.processFrontMatter(file, (frontmatter) => {
-		frontmatter['title'] = title.charAt(0).toUpperCase() + title.slice(1).trim();
-		frontmatter['slug'] = name;
-		frontmatter['summary'] = '';
-		frontmatter['thumbnail'] = '';
-		frontmatter['thumbnail_x'] = '0.5';
-		frontmatter['thumbnail_y'] = '0.5';
-		frontmatter['tags'] = [];
-		frontmatter['created_at'] = timestamp;
-		frontmatter['updated_at'] = timestamp;
-		if(folder === workFolder) {
-			frontmatter['repository'] = '';
-			frontmatter['demo'] = '';
+	await app.fileManager.processFrontMatter(file, (fm) => {
+		fm.title = title.charAt(0).toUpperCase() + title.slice(1).trim();
+		fm.slug = slug;
+		fm.summary = '';
+		fm.thumbnail = '';
+		fm.thumbnail_x = '';
+		fm.thumbnail_y = '';
+		fm.tags = [];
+		fm.created_at = timestamp;
+		fm.updated_at = timestamp;
+		
+		if(folder === projectsFolder) {
+			fm.repository = '';
+			fm.demo = '';
 		}
 	})
 })

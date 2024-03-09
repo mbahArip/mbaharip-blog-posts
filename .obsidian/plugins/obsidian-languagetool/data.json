@@ -1,0 +1,9 @@
+{
+  "serverUrl": "",
+  "autoCheckDelay": 3000,
+  "shouldAutoCheck": true,
+  "pickyMode": false,
+  "synonyms": "en",
+  "staticLanguage": "en",
+  "motherTongue": "en"
+}

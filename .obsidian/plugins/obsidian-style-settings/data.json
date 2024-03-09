@@ -1,4 +1,24 @@
 {
   "minimal-style@@window-title-off": false,
-  "minimal-advanced@@styled-scrollbars": true
+  "minimal-advanced@@styled-scrollbars": true,
+  "minimal-style@@sidebar-tabs-style": "sidebar-tabs-wide",
+  "minimal-style@@ribbon-style": "ribbon-hidden",
+  "minimal-cards-style@@cards-max-width": "1fr",
+  "sanctum@@color-accent-rgb-d": "246, 141, 69",
+  "sanctum@@file-line-width": 70,
+  "sanctum@@active-line-accent": "var(--background-hover)",
+  "sanctum@@aside-counter": false,
+  "sanctum@@aside-border": false,
+  "sanctum@@hide-vault-title": false,
+  "sanctum@@wrap-nav-titles": true,
+  "sanctum@@tag-border-width": "1px",
+  "sanctum@@nav-folder-indicators": false,
+  "sanctum@@colorful-active-nav": false,
+  "sanctum@@table-cell-border": true,
+  "sanctum@@table-row-border": true,
+  "sanctum@@table-column-border": true,
+  "sanctum@@table-alternate-row": false,
+  "sanctum@@table-alternate-column": true,
+  "sanctum@@blockquote-border-thickness": 2,
+  "sanctum@@blockquote-marker": true
 }

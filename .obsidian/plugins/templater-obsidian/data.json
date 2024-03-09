@@ -22,7 +22,8 @@
   "syntax_highlighting": true,
   "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    "templates/New post.md"
+    "templates/New post.md",
+    "templates/Generate Index.md"
   ],
   "startup_templates": [
     ""

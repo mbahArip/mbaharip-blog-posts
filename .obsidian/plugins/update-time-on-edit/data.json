@@ -11,5 +11,7 @@
   ],
   "ignoreCreatedFolder": [],
   "enableExperimentalHash": false,
-  "fileHashMap": {}
+  "fileHashMap": {
+    "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md": "51a7b9aac4fc991a847a28139b75e562299b27b4287d212c9a3de58c0d24c958"
+  }
 }

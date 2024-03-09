@@ -1,0 +1,15 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "mbaharip's Obsidian Vault contain all post contents",
+  "scripts": {
+    "start": "tsx ./scripts/index.ts"
+  },
+  "author": "mbaharip",
+  "devDependencies": {
+    "@types/node": "^20.11.24"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}

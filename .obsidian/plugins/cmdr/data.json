@@ -1,5 +1,5 @@
 {
-  "confirmDeletion": true,
+  "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
   "editorMenu": [],
@@ -7,13 +7,30 @@
   "leftRibbon": [],
   "rightRibbon": [],
   "titleBar": [],
-  "statusBar": [],
+  "statusBar": [
+    {
+      "id": "templater-obsidian:templates/Generate Index.md",
+      "icon": "hammer",
+      "name": "Generate Index",
+      "mode": "desktop",
+      "color": "#38b3ff"
+    },
+    {
+      "id": "obsidian-git:push2",
+      "icon": "upload-cloud",
+      "name": "Git Push",
+      "mode": "any",
+      "color": "#3cb3fb"
+    }
+  ],
   "pageHeader": [],
   "macros": [],
   "explorer": [],
   "hide": {
     "statusbar": [],
-    "leftRibbon": []
+    "leftRibbon": [
+      "Templater: Insert templates/Test.md"
+    ]
   },
   "spacing": 8,
   "advancedToolbar": {

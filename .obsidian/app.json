@@ -6,5 +6,6 @@
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "attachments",
   "propertiesInDocument": "visible",
-  "spellcheck": true
+  "spellcheck": true,
+  "useMarkdownLinks": true
 }
