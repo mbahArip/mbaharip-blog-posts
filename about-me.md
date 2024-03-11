@@ -1,6 +1,6 @@
 ---
 created_at: 2024-03-11T09:06:23+07:00
-updated_at: 2024-03-11T09:17:41+07:00
+updated_at: 2024-03-11T09:32:53+07:00
 ---
 <- START:ABOUT ->
 ## About Me
@@ -64,5 +64,13 @@ We also take [some photos (via Instagram)](https://www.instagram.com/p/CpWJ0p5v7
 <- ITEM:END ->
 <- COLLAPSE:END ->
 
-Before I graduated, 
+Before I graduated, I've landed my first job as a Full-stack developer (event thought it's not that long).
+
+<- COLLAPSE:START ->
+<- ITEM:START title="Full-stack developer at A.A Solution" subtitle="Apr 2023 - Sept 2023" key="First Job" ->
+I was actually invited by a friend as a Full-stack dev at this startup company. A.A Solution was a company that helping local small business an application that they can use, such as FnB apps, PoS system, etc.
+
+<- ITEM:END->
+<- COLLAPSE:END ->
+
 <- END:EXPERIENCES ->
