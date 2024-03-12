@@ -7,7 +7,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: 
 created_at: 2024-03-11T09:06:23+07:00
-updated_at: 2024-03-12T05:31:45+07:00
+updated_at: 2024-03-12T06:58:13+07:00
 ---
 <- START:ABOUT ->
 ## About Me
@@ -76,7 +76,7 @@ Before I graduated, I've landed my first job as a Full-stack developer (event th
 <- COLLAPSE:START ->  
 <- ITEM:START title="Full-stack developer at A.A Solution" subtitle="Apr 2023 - Sept 2023" key="First Job" ->  
 A.A Solution was a company that helping local small business an application that they can use, such as FnB apps, PoS system, etc. I was actually invited by a friend as a Full-stack dev at this startup company. (of course through interview first)  
-<- ITEM:END->  
+<- ITEM:END ->  
 <- COLLAPSE:END ->
 
 <- END:EXPERIENCES ->
