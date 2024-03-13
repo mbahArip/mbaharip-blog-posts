@@ -7,17 +7,16 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-13T19:35:45+07:00
+updated_at: 2024-03-13T20:39:49+07:00
 ---
-Hello all! I finally have enough motivation to create my own portfolio website.  
-I'll use this blog as a place to practice my writing skills and also to improve my English.
-
-For this first post, I'll explaining how I use Obsidian as this site CMS
-
-:::blockquote{slot="info"}  
+:::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  
 I decided to rewrite this articles to explain how I do it on the new site  
 :::
+
+Hello all! I finally have enough motivation to create my own portfolio website. I'll use this blog as a place to practice my writing skills and also to improve my English.
+
+For this first post, I'll explaining how I use Obsidian as this site CMS
 
 {{ data-toc }}
 ## Obsidian?
@@ -69,6 +68,9 @@ This section will be separated into 2 parts:
 1. Getting the notes
 2. Handle attachments
 
+:::blockquote{slot="info" title="Why do I use 2 different repository?"}
+
+:::
 > **Why do I use 2 different repository?**  
 > Since I'm using Next.js for my site, it would take up to 60 seconds to rebuild when I'm adding a new post.  
 > So I decided to use 2 different repository instead to make sure it doesn't need to rebuild the site.  
