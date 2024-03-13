@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/articles/test-new-post.md",
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/articles/test-new-post.md",
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/articles/test-new-post.md",
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/articles/test-new-post.md"
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md"
               }
             }
           },
@@ -186,8 +186,8 @@
   },
   "active": "911bbb5b5b513df2",
   "lastOpenFiles": [
-    "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "posts/articles/test-new-post.md",
+    "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "about-me.md",
     "templates/Generate Index.md",
     "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.png",
