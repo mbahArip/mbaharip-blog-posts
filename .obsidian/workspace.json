@@ -30,9 +30,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "911bbb5b5b513df2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -99,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "about-me.md",
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "about-me.md",
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "about-me.md"
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md"
               }
             }
           },
@@ -173,10 +185,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "3ee6cdf71e065919",
+  "active": "911bbb5b5b513df2",
   "lastOpenFiles": [
-    "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "about-me.md",
+    "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "templates/Generate Index.md",
     "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.png",
     "attachments/banner/dfuj8iko9ru902345.png",
@@ -192,7 +204,6 @@
     "attachments/how-i-use-obsidian-as-my-portfolio-cms-3.png",
     "attachments/how-i-use-obsidian-as-my-portfolio-cms-2.png",
     "attachments/how-i-use-obsidian-as-my-portfolio-cms-1.png",
-    "about-me.md",
     "web",
     "templates/Generate index.md",
     "README.md",

@@ -7,15 +7,17 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-09T15:44:54+07:00
+updated_at: 2024-03-13T18:45:36+07:00
 ---
 Hello all! I finally have enough motivation to create my own portfolio website.  
 I'll use this blog as a place to practice my writing skills and also to improve my English.
 
 For this first post, I'll explaining how I use Obsidian as this site CMS
 
-> Since I've redo my site and the way I handle blog post  
-> I decide to update this articles to explain how I do it on the new site
+:::blockquote{slot="info"}
+Since I've redo my site, and the way I handle blog post
+I decided to rewrite this articles to explain how I do it on the new site
+:::
 
 {{ data-toc }}
 ## Obsidian?
@@ -23,7 +25,8 @@ For those who don't know, [Obsidian](https://obsidian.md) is a free to use markd
 
 ### Why Do I Use Obsidian?
 I know there are alternative like **Notion** that support database and integration, but there are some reason that I actually move to **Obsidian**.
-1. **I'm not a big fan of block based editor**, it is faster to write markdown file instead of using slash command to insert an element type. (ex: for creating heading, it is faster to write `# This is a heading` instead of `/head > enter > write the heading`)
+1. **I'm not a big fan of block based editor**, it is faster to write markdown file instead of using slash command to insert an element type.
+	(ex: for creating heading, it is faster to write `# This is a heading` instead of `/head > enter > write the heading`)
 2. **Extendable**, obsidian have a lot of community plugins that could help to extend your obsidian vault. They also provide a documentation about how to create your own plugin.
 
 ### My Obsidian Vault
