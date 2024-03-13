@@ -7,7 +7,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-13T20:39:49+07:00
+updated_at: 2024-03-13T20:54:38+07:00
 ---
 :::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  
@@ -69,13 +69,9 @@ This section will be separated into 2 parts:
 2. Handle attachments
 
 :::blockquote{slot="info" title="Why do I use 2 different repository?"}
-
+I don't want to trigger rebuild everytime I add new post.
+*You can also use 1 repo with 2 different branch instead of 2 repository.*
 :::
-> **Why do I use 2 different repository?**  
-> Since I'm using Next.js for my site, it would take up to 60 seconds to rebuild when I'm adding a new post.  
-> So I decided to use 2 different repository instead to make sure it doesn't need to rebuild the site.  
-> *You can use different branch if you want to keep it into 1 repository*
-
 ### Getting the Notes
 The notes will be displayed in 2 different way:
 - **Summarized**, that will be displayed on posts list. It will only show the basic data from frontmatter.
@@ -97,8 +93,9 @@ Why it doesn't work well? It has problem on 3 things:
 
 So now we need to fix all these problems.
 
-> **Disclaimer**  
-> All these performance test, are tested on local not deployed.
+:::blockquote{slot="warning" title="Disclaimer"}
+All test performed on local
+:::
 
 By fetching the notes folder, the response from `octokit` that I could use only `name`, and `path`. ([Get content repository documentation](https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28))  
 ![Basic fetching using octokit](how-i-use-obsidian-as-my-portfolio-cms-1.png)  
@@ -243,6 +240,8 @@ There are ~100ms spike on response time, but we save around ~95% of the bandwidt
 ![Left: Uncompressed PNG image | Right: Compressed WEBP image](how-i-use-obsidian-as-my-portfolio-cms-8.png)
 
 Now I can use this optimized Image on posts thumbnail or banner.
+
+### Transforming the content
 
 ## Conclusion
 The reason I use **Obsidian** as my site CMS is because it's using markdown, which I familiar with, and also it is extendable with community plugins.  
