@@ -12,5 +12,6 @@
   "templater-obsidian",
   "omnisearch",
   "update-time-on-edit",
-  "languagetool"
+  "settings-search",
+  "obsidian-languagetool-plugin"
 ]
