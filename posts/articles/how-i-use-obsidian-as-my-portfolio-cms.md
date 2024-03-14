@@ -7,7 +7,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-14T10:55:40+07:00
+updated_at: 2024-03-14T12:01:28+07:00
 ---
 :::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  
@@ -248,7 +248,7 @@ There are ~100ms spike on response time, but we save around ~95% of the bandwidt
 Now I can use this optimized Image on posts thumbnail or banner.
 
 ### Transforming the content
-Now I have solve the issue with fetching the content, and the attachments
+Now I have solve the issue with fetching the content, and the attachments. While I can use it as it is and let `react-markdown` render it, there are 
 
 ## Conclusion
 The reason I use **Obsidian** as my site CMS is because it's using markdown, which I familiar with, and also it is extendable with community plugins.  
