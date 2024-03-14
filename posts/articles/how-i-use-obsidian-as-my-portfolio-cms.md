@@ -7,7 +7,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-13T20:54:38+07:00
+updated_at: 2024-03-14T10:55:40+07:00
 ---
 :::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  
@@ -210,6 +210,12 @@ markdownContent = markdownContent.replace(
 ```
 
 #### Extra: Optimizing Image Attachment
+
+:::blockquote{slot="info"}
+On the new site, I'm using URL from GitHub instead of using this.
+I only keep it here for reference how I optimizing image.
+:::
+
 Heavy images is not a good thing for blog post, especially if you're strict about core web vitals.  
 Uncompressed image will affect your Largest Contentful Paint (LCP) measurement, and also it will take a lot of time to load if the user have bad internet connection.
 
@@ -242,6 +248,7 @@ There are ~100ms spike on response time, but we save around ~95% of the bandwidt
 Now I can use this optimized Image on posts thumbnail or banner.
 
 ### Transforming the content
+Now I have solve the issue with fetching the content, and the attachments
 
 ## Conclusion
 The reason I use **Obsidian** as my site CMS is because it's using markdown, which I familiar with, and also it is extendable with community plugins.  
