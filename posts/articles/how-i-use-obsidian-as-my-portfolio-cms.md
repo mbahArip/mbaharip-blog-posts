@@ -7,7 +7,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-14T12:01:28+07:00
+updated_at: 2024-03-14T12:36:25+07:00
 ---
 :::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  
@@ -68,9 +68,9 @@ This section will be separated into 2 parts:
 1. Getting the notes
 2. Handle attachments
 
-:::blockquote{slot="info" title="Why do I use 2 different repository?"}
-I don't want to trigger rebuild everytime I add new post.
-*You can also use 1 repo with 2 different branch instead of 2 repository.*
+:::blockquote{slot="info" title="Why do I use 2 different repository?"}  
+I don't want to trigger rebuild every time I add new post.  
+*You can also use 1 repo with 2 different branch instead of 2 repository.*  
 :::
 ### Getting the Notes
 The notes will be displayed in 2 different way:
@@ -93,8 +93,8 @@ Why it doesn't work well? It has problem on 3 things:
 
 So now we need to fix all these problems.
 
-:::blockquote{slot="warning" title="Disclaimer"}
-All test performed on local
+:::blockquote{slot="warning" title="Disclaimer"}  
+All test performed on local  
 :::
 
 By fetching the notes folder, the response from `octokit` that I could use only `name`, and `path`. ([Get content repository documentation](https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28))  
@@ -211,9 +211,9 @@ markdownContent = markdownContent.replace(
 
 #### Extra: Optimizing Image Attachment
 
-:::blockquote{slot="info"}
-On the new site, I'm using URL from GitHub instead of using this.
-I only keep it here for reference how I optimizing image.
+:::blockquote{slot="info"}  
+On the new site, I'm using URL from GitHub instead of using this.  
+I only keep it here for reference how I optimizing image.  
 :::
 
 Heavy images is not a good thing for blog post, especially if you're strict about core web vitals.  
@@ -247,8 +247,137 @@ There are ~100ms spike on response time, but we save around ~95% of the bandwidt
 
 Now I can use this optimized Image on posts thumbnail or banner.
 
-### Transforming the content
-Now I have solve the issue with fetching the content, and the attachments. While I can use it as it is and let `react-markdown` render it, there are 
+### Transforming the Content
+Now I have solve the issue with fetching the content, and the attachments. While I can use it as it is and let `react-markdown` render it, there are times where I need a custom component to render.  
+For example in this note, the Table of Contents are marked by `{{ data-toc }}` inside the markdown, or how I turn a `blockquote` element into `Alert` component.
+
+#### Render the Table of Contents
+For the table of contents, I simply replace the section to a `Collapsible` components with links inside.  
+I separate the content into an array with this zod schema:
+
+```ts
+const Schema_PostContent_Item = z.object({
+		type: z.literal("markdown"),
+		content: z.string()
+	}).or(
+		z.object({
+			type: z.literal("toc"),
+			headings: z.array(
+				z.object({
+					id: z.string(),
+					text: z.string(),
+					level: z.number().min(1).max(6)
+				})
+			)
+		})
+	);
+const Schema_PostContent = z.object({
+	slug: z.string(),
+	content: z.array(Schema_PostContent_Item)
+})
+```
+
+And then split the content by `{{ data-toc }}`, to fill the content array.
+
+```ts
+const content_data: z.infer<typeof Schema_PostContent> = {
+	slug: post.frontmatter.slug,
+	content: []
+}
+
+// Check if data-toc exists inside the post
+if(post.content.includes("{{ data-toc }}")) {
+	// This would return array with 2 items, Introduction section, and Content content section
+	const [introduction, content] = post.content.split("{{ data-toc }}");
+
+	// Extract headings from the post
+	const headings = content.match(/^(#+)\s(.+)$/gm);
+	const toc = headings?.map((heading) => {
+		const level = heading.match(/^(#+)/)![0].length;
+		const text = heading.replace(/^(#+)\s/, "");
+		const id = text
+			.toLowerCase()
+			.replace(/[^\W\s]/gi, "") // Remove all symbols
+			.replace(/\s/g, "-") // Replace all space with hyphens
+			.replace(/-+/g, "-"); // Remove double hyphens
+		return { id, text, level };
+	})
+
+	content_data.content.push({
+		type: "markdown",
+		content: introduction
+	});
+	content_data.content.push({
+		type: "toc",
+		headings: toc || []
+	});
+	content_data.content.push({
+		type: "markdown",
+		content: content
+	})
+} else {
+	content_data.content.push({
+		type: "markdown",
+		content: post.content
+	});
+}
+
+// Type checking, if the value of content_data not satisfy the schema, it will return an error
+Schema_PostContent.parse(content_data);
+
+// Render the markdown
+return (
+	<Space direction="vertical">
+		{content_data.content.map((item, index) => {
+			switch(item.type):
+				case "markdown":
+					return <Markdown key={index}>{item.content}</Markdown>
+				case "toc":
+					return <ToC items={item.content} />
+				default:
+					return null
+		})}
+	</Space>
+)
+```
+
+#### Using `remark-directive`
+For other thing that I need to render as components, I will use `remark-directive` plugin.  
+This will let me add attribute to the element I want to render, then check on `react-markdown` to render what components when it have the attribute.
+
+For example, I will render an `Alert` component instead of `blockquote` if I have `data-slot` attribute.
+```md
+:::blockquote{slot="info" title="Notice"}
+The content of the alert component
+:::
+```
+In the `react-markdown` component, I could add checking to render.
+```ts
+<ReactMarkdown 
+	components={{
+		blockquote: ({children, ...props}) => {
+			if(props.slot) {
+				return <Alert message={children} type={props.slot} />
+			}
+			
+			return (
+				<blockquote {...props}>
+					{children}
+				</blockquote>
+			)
+		}
+	}}
+/>
+```
+
+Here are the result
+
+> **Notice**  
+> This is a normal blockquote using markdown format
+
+:::blockquote{slot="info" title="Notice"}  
+This is a blockquote rendered using react-directive  
+:::
 
 ## Conclusion
 The reason I use **Obsidian** as my site CMS is because it's using markdown, which I familiar with, and also it is extendable with community plugins.  
@@ -267,5 +396,7 @@ About how to handling attachment, I can simply get the attachment name then fetc
 To optimize the attachment, I'm using `sharp` to resize the attachment and convert it to `webp`. With this I could compress the size of the image up to ~95%.
 
 ---
+
 Thank you for reading my long first post.  
-Hope this post can inspire you.
+Hope this post can inspire you.  
+If you have any question or want to point out something I did wrong, feel free to leave a comment!
