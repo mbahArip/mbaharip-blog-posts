@@ -7,7 +7,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-14T12:36:25+07:00
+updated_at: 2024-03-15T19:21:49+07:00
 ---
 :::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  
@@ -34,31 +34,31 @@ If you want the exact copy of my obsidian settings, you can copy my vault repo s
 There are a lot, i mean a looooot community plugins that could help your productivity or even experiences while using Obsidian.  
 Here are a list of obsidian plugins that I use:
 
-| Plugins Name           | Why did I use it?                                                                                                                                                                                                       |
-| :--------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Advanced Tables        | This plugin help me formatting, editing, and navigating through table.<br>With this plugin, I can easily reorder, sort, align the table by a simple click or drag n drop.                                               |
-| Banners                | This will add banner on top of the notes, the images you see on top of this notes are based on this banner.<br>I can also fine-tune the position by adding X and Y offset on the frontmatter.                           |
-| Commander              | With this plugin I can add custom command shortcut to Obsidian UI.<br>Like run a templater command, git push button, I also can create a macro to combine multiple shortcut.                                            |
-| Git                    | If you're an dev, 99% of you must have already using it.<br>If you don't, it is a version control system that track changes in files.                                                                                   |
-| LanguageTool Checker   | I've been using LanguageTool in my browser to help me check my email before sending it.<br>It's helping me a lot since English isn't my native language.                                                                |
-| Linter                 | This plugin could format headings, footer, paragraph, and many other things.<br>I'm using this to make sure all my notes were consistent.                                                                               |
-| Natural Language Dates | Working with date and times isn't fun.<br>With this plugin, I could easily insert time by using command like `@@today` or `@@yesterday` or even something like `@@2 weeks ago`.                                         |
-| Omnisearch             | A fuzzy search plugin to find anything I've write before.<br>I've been using it on my uni-notes vault and it's really helpful when I need to find something that I don't even remember where i put it.                  |
-| Paste Image Rename     | By default, Obsidian will name the attachment as `Pasted images bla bla`.<br>This plugin will change it automatically with the notes name or ask you the new name.                                                      |
-| Style Settings         | This plugin will let you controls and adjust theme, plugin, and many other things.                                                                                                                                      |
-| Templater              | Templater really useful if you have note that should follow certain template.<br>It also can run a javascript inside. I'm using this plugin to create a prompt when I create a new note, and also for build post index. |
-| Update Time on Edit    | Automatically update `updated_at` metadata on frontmatter when saving.                                                                                                                                                  |
+| Plugins Name               | Why did I use it?                                                                                                                                                                                                       |
+| :------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Advanced Tables**        | This plugin help me formatting, editing, and navigating through table.<br>With this plugin, I can easily reorder, sort, align the table by a simple click or drag n drop.                                               |
+| **Banners**                | This will add banner on top of the notes, the images you see on top of this notes are based on this banner.<br>I can also fine-tune the position by adding X and Y offset on the frontmatter.                           |
+| **Commander**              | With this plugin I can add custom command shortcut to Obsidian UI.<br>Like run a templater command, git push button, I also can create a macro to combine multiple shortcut.                                            |
+| **Git**                    | If you're an dev, 99% of you must have already using it.<br>If you don't, it is a version control system that track changes in files.                                                                                   |
+| **LanguageTool Checker**   | I've been using LanguageTool in my browser to help me check my email before sending it.<br>It's helping me a lot since English isn't my native language.                                                                |
+| **Linter**                 | This plugin could format headings, footer, paragraph, and many other things.<br>I'm using this to make sure all my notes were consistent.                                                                               |
+| **Natural Language Dates** | Working with date and times isn't fun.<br>With this plugin, I could easily insert time by using command like `@@today` or `@@yesterday` or even something like `@@2 weeks ago`.                                         |
+| **Omnisearch**             | A fuzzy search plugin to find anything I've write before.<br>I've been using it on my uni-notes vault and it's really helpful when I need to find something that I don't even remember where i put it.                  |
+| **Paste Image Rename**     | By default, Obsidian will name the attachment as `Pasted images bla bla`.<br>This plugin will change it automatically with the notes name or ask you the new name.                                                      |
+| **Style Settings**         | This plugin will let you controls and adjust theme, plugin, and many other things.                                                                                                                                      |
+| **Templater**              | Templater really useful if you have note that should follow certain template.<br>It also can run a javascript inside. I'm using this plugin to create a prompt when I create a new note, and also for build post index. |
+| **Update Time on Edit**    | Automatically update `updated_at` metadata on frontmatter when saving.                                                                                                                                                  |
 #### Folder Structure, Keep Thing Organized
 I'm simplifying the folder structure so it have less folder / files.
 
-| Folder / File  | What is this?                                                                                             |
-| -------------- | --------------------------------------------------------------------------------------------------------- |
-| /attachments   | All the attachments like image, file, or any other media are saved on this folder.                        |
-| /posts         | All posts are inside this folder, it contains 2 categories which is `articles` and `projects`.            |
-| /scripts       | For now it's contains script for build posts index.<br>Might be adding more in the future when I need it. |
-| /templates     | Templater file.<br>Will run these file when creating a new note or build posts index.                     |
-| index.json     | Generated posts index, It will be used for listing or searching posts on site.                            |
-| index.min.json | Minimized posts index.                                                                                    |
+| Folder / File      | What is this?                                                                                             |
+| ------------------ | --------------------------------------------------------------------------------------------------------- |
+| **/attachments**   | All the attachments like image, file, or any other media are saved on this folder.                        |
+| **/posts**         | All posts are inside this folder, it contains 2 categories which is `articles` and `projects`.            |
+| **/scripts**       | For now it's contains script for build posts index.<br>Might be adding more in the future when I need it. |
+| **/templates**     | Templater file.<br>Will run these file when creating a new note or build posts index.                     |
+| **index.json**     | Generated posts index, It will be used for listing or searching posts on site.                            |
+| **index.min.json** | Minimized posts index.                                                                                    |
 
 ## Integrate the Notes into My Site
 After explaining about Obsidian, now I will now explaining how I add it into my site.  
