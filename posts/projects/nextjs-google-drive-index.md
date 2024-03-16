@@ -5,21 +5,16 @@ summary: Google Drive index built with Next.js for easier sharing files to publi
 thumbnail: "![[nextjs-google-drive-index.png]]"
 thumbnail_x: "0.5"
 thumbnail_y: "0.5"
-tags:
-  - Nextjs
-  - Typescript
-  - Index
+tags: Nextjs, Typescript, Index
 created_at: 2024-03-16T19:56:00+07:00
-updated_at: 2024-03-16T21:04:12+07:00
+updated_at: 2024-03-16T21:11:04+07:00
 repository: https://github.com/mbahArip/next-gdrive-index
 demo: https://drive-demo.mbaharip.com/
 ---
 `next-gdrive-index` is an indexer for Google Drive, it's a simple project that I made to share my files in Google Drive.  
 It's aim to simplify the process of sharing files using Google Drive, and also implements some features that I think is useful for sharing files.
 
-:::blockquote{slot="info"}  
 This project are **Heavily Inspired** by [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index) by [SpencerWooo](https://github.com/spencerwooo)  
-:::
 
 ## Why I Made This?
 I know there's already couple project to create Google Drive index, such as [goindex](https://github.com/alx-xlx/goindex). It was built on Cloudflare Workers and Vue, which I don't have much experience. And it was pretty slow when the files are nested deep into folder. (At first I thought it was Cloudflare fault, after implementing my own I found out it was Google Drive problem)  
