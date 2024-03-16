@@ -1,5 +1,18 @@
 [
   {
+    "slug": "nextjs-google-drive-index",
+    "title": "Next.js Google Drive Index",
+    "summary": "Google Drive index built with Next.js for easier sharing files to public",
+    "type": "project",
+    "tags": [
+      "Nextjs",
+      "Typescript",
+      "Index"
+    ],
+    "created_at": "2024-03-16T12:56:00.000Z",
+    "updated_at": "2024-03-16T13:50:10.000Z"
+  },
+  {
     "slug": "how-i-use-obsidian-as-my-portfolio-cms",
     "title": "How I use Obsidian as my portfolio CMS",
     "summary": "Explaining how I built my site CMS with Obsidian, a markdown note-taking app, including tricks to efficiently fetch content and optimize attachments.",
