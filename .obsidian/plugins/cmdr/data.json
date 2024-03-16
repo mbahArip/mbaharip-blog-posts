@@ -21,6 +21,13 @@
       "name": "Git Push",
       "mode": "any",
       "color": "#3cb3fb"
+    },
+    {
+      "id": "obsidian-git:commit",
+      "icon": "git-commit",
+      "name": "Git: Commit",
+      "mode": "any",
+      "color": "#3cb3fb"
     }
   ],
   "pageHeader": [],
