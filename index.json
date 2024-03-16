@@ -2,6 +2,7 @@
   {
     "slug": "how-i-use-obsidian-as-my-portfolio-cms",
     "title": "How I use Obsidian as my portfolio CMS",
+    "summary": "Explaining how I built my site CMS with Obsidian, a markdown note-taking app, including tricks to efficiently fetch content and optimize attachments.",
     "type": "article",
     "tags": [
       "Obsidian",
@@ -9,6 +10,6 @@
       "Typescript"
     ],
     "created_at": "2023-07-16T12:33:46.000Z",
-    "updated_at": "2024-03-14T05:36:25.000Z"
+    "updated_at": "2024-03-15T12:21:49.000Z"
   }
 ]

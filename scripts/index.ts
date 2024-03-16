@@ -11,6 +11,7 @@ const projects_folder = path.resolve(__dirname, "../posts/projects");
 type Index = {
   slug: string;
   title: string;
+  summary?: string;
   type: "article" | "project";
   tags: string[];
   created_at: string;
@@ -56,6 +57,7 @@ type Frontmatter = {
     processed.push({
       slug: data.slug,
       title: data.title,
+      summary: data.summary,
       type,
       tags: data.tags ? data.tags.split(",").map((tag) => tag.trim()) : [],
       created_at: data.created_at,
@@ -71,10 +73,7 @@ type Frontmatter = {
   const min_json = JSON.stringify(processed);
 
   // Write the processed array to the index.min.json file
-  await Promise.all([
-    writeFile(index_path, json, "utf-8"),
-    writeFile(index_min_path, min_json, "utf-8"),
-  ]);
+  await Promise.all([writeFile(index_path, json, "utf-8"), writeFile(index_min_path, min_json, "utf-8")]);
 
   const json_size = Buffer.byteLength(json, "utf-8");
   const min_json_size = Buffer.byteLength(min_json, "utf-8");
