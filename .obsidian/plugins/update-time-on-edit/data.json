@@ -13,6 +13,7 @@
   "enableExperimentalHash": false,
   "fileHashMap": {
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md": "b73701df2aea31989cf90babcdb5930c998bf83a295457e44bd6259790095f75",
-    "about-me.md": "52e73d2ea39969d764bdfe880c6581dc9a0d2b02979c2a646f70a3c51a95cc56"
+    "about-me.md": "52e73d2ea39969d764bdfe880c6581dc9a0d2b02979c2a646f70a3c51a95cc56",
+    "posts/projects/nextjs-google-drive-index.md": "ca5fe2bc0c8cae16b415149dabd3a7fa34a88b4410bfa7040e48bc7caa4f4308"
   }
 }

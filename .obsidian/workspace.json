@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+                "file": "posts/projects/nextjs-google-drive-index.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+                "file": "posts/projects/nextjs-google-drive-index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+                "file": "posts/projects/nextjs-google-drive-index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md"
+                "file": "posts/projects/nextjs-google-drive-index.md"
               }
             }
           },
@@ -183,10 +183,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "143dacffdb23884f",
+  "active": "911bbb5b5b513df2",
   "lastOpenFiles": [
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-9.png",
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+    "posts/projects/nextjs-google-drive-index.md",
+    "attachments/banner/nextjs-google-drive-index.png",
+    "attachments/banner/nextjs-google-drive-index",
+    "attachments/banner/New Bitmap image.bmp",
+    "attachments/how-i-use-obsidian-as-my-portfolio-cms-9.png",
     "posts/articles/test-new-post.md",
     "about-me.md",
     "templates/Generate Index.md",
@@ -201,8 +205,6 @@
     "templates/New post.md",
     "posts/projects/test-project.md",
     "attachments/how-i-use-obsidian-as-my-portfolio-cms-4.png",
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-3.png",
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-2.png",
     "web",
     "templates/Generate index.md",
     "README.md",
@@ -227,8 +229,6 @@
     "posts/articles/Test.md",
     "posts/articles/how-i-use-obsidian-and-github-as-my-blog-cms.md",
     "posts/articles/how-i-use-obsidian-and-github-as-my-portfolio-cms.md",
-    "posts/articles/test-blog-posts.md",
-    "posts/projects",
-    "Welcome.md"
+    "posts/articles/test-blog-posts.md"
   ]
 }
