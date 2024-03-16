@@ -10,7 +10,54 @@ tags:
   - Typescript
   - Index
 created_at: 2024-03-16T19:56:00+07:00
-updated_at: 2024-03-16T19:59:17+07:00
+updated_at: 2024-03-16T20:31:53+07:00
 repository: https://github.com/mbahArip/next-gdrive-index
 demo: https://drive-demo.mbaharip.com/
 ---
+`next-gdrive-index` is an indexer for Google Drive, it's a simple project that I made to share my files in Google Drive.
+It's aim to simplify the process of sharing files using Google Drive, and also implements some features that I think is useful for sharing files.
+
+:::blockquote{slot="info"}
+This project are **Heavily Inspired** by [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index) by [SpencerWooo](https://github.com/spencerwooo)
+:::
+
+## Why I made this?
+I know there's already couple project to create Google Drive index, such as [goindex](https://github.com/alx-xlx/goindex). It was built on Cloudflare Workers and Vue, which I don't have much experience. And it was pretty slow when the files are nested deep into folder. (At first I thought it was Cloudflare fault, after implementing my own I found out it was Google Drive problem)
+So I decided to create my own Google Drive index using technology I'm more familiar with. **Next.js** and deployed on **Vercel**.
+
+> *"Why don't use Onedrive instead?"*
+
+When I compare the price between these two services, Google Drive is cheaper than Onedrive.
+For 100GB plan, Google Drive price at IDR 269.000 / ~$18 USD annually, meanwhile Onedrive at IDR 319.000 / ~$21 USD annually.
+Even if I don't want to spend any money, Google Drive offering 15GB of storage, and Onedrive only offering 5GB.
+
+I know there are a lot of people selling cheap `.edu` account for Google Drive and Onedrive, but most of the time those account doesn't last long, especially Google Drive account.
+So I want to do it without buying cheap `.edu` account or anything similar.
+## Features
+- **Private Index**, Lock the whole site with a password
+- **Folder and file protection**, You can add password to a folder
+- **Readme file**, Add a note / readme to a folder
+- **File preview**, Preview files directly on the site. Supported files:
+	- Image (only format supported by the browser)
+	- Video (only format supported by the browser)
+	- Audio (only format supported by the browser)
+	- Markdown
+	- PDF
+	- Document (docx, pptx, xlsx)
+	- Code
+	- Text
+	- Manga (cbz)
+- **File search**, Find your folders / files easily
+- **Raw file link**, Use the index to host assets for your website or embed it on forums
+## Security
+All files that will be shown, **Need to be Shared** with `Anyone with the link can view` permission.
+This is because Google Drive API can only access files that are shared with this permission.
+
+But, every files `id` and `webContentLink` are encrypted with `AES-256-CBC` using your own key, so no one can view the `id` / `webContentLink` of your files without the correct key.
+Except, if the files are larger than the `fileSizeLimit` (default is 4MB for Vercel), then the `webContentLink` will be used as download link.
+## Known Issues
+### File size limit
+File size limit causing some files can't be previewed, and the download will be redirected to the raw file link.
+The file size limit can be changed on config file.
+### Long Response Time
+The flow of the data fetching is like this:
