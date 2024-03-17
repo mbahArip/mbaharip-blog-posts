@@ -7,7 +7,7 @@ thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-17T19:58:50+07:00
+updated_at: 2024-03-17T20:06:54+07:00
 ---
 :::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  
