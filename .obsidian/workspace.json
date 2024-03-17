@@ -25,18 +25,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "about-me.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "911bbb5b5b513df2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "posts/articles/using-tailwindcss-with-ant-design.md",
                 "mode": "source",
                 "source": false
@@ -44,7 +32,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,8 +78,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -185,13 +172,15 @@
       "gemini-assistant:New Gemini chat": false
     }
   },
-  "active": "ac40407ebd5fc614",
+  "active": "3ee6cdf71e065919",
   "lastOpenFiles": [
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "posts/articles/using-tailwindcss-with-ant-design.md",
+    "about-me.md",
+    "attachments/using-tailwindcss-with-ant-design-2.png",
+    "attachments/using-tailwindcss-with-ant-design-1.png",
     "attachments/banner/using-tailwindcss-with-antdesign.webp",
     "posts/projects/nextjs-google-drive-index.md",
-    "about-me.md",
     "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.webp",
     "attachments/banner/nextjs-google-drive-index.webp",
     "attachments/banner/using-tailwind-with-antdesign.webp",
@@ -202,10 +191,8 @@
     "attachments/banner/nextjs-google-drive-index.png",
     "attachments/banner/nextjs-google-drive-index",
     "attachments/banner/New Bitmap image.bmp",
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-9.png",
     "posts/articles/test-new-post.md",
     "templates/Generate Index.md",
-    "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.png",
     "templates/Add.md",
     "attachments/banner",
     "templates/New post.md",

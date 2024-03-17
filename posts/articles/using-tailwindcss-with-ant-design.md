@@ -1,13 +1,13 @@
 ---
 title: Using TailwindCSS with Ant-design
 slug: using-tailwindcss-with-ant-design
-summary: ""
+summary: TailwindCSS, a popular utility-first CSS framework, integrates seamlessly with Ant-Design's UI library through a custom plugin. By implementing this plugin, developers experience enhanced development efficiency and a cohesive design system that combines the strengths of both tools.
 thumbnail: "![[using-tailwindcss-with-antdesign.webp]]"
 thumbnail_x: "0.5"
 thumbnail_y: "0.5"
 tags: TailwindCSS, UI, Ant-Design
 created_at: 2024-03-17T23:29:26+07:00
-updated_at: 2024-03-18T01:12:50+07:00
+updated_at: 2024-03-18T01:35:32+07:00
 ---
 Lately I've been using [Ant-design](https://ant.design) (will be mentioned as antd) as my UI library, but there are some problem when I tried to using it with [TailwindCSS](https://tailwindcss.com/) (will be mentioned as tailwind).  
 On this articles, I'll sharing how I'm using Ant-design theme with TailwindCSS.
@@ -285,4 +285,47 @@ Now we can add the colors by using function, and also add the rest like font siz
 }
 ```
 
-#### Using it
+### Using it
+At this point I already have antd theme config, and the plugin itself. Now all we need to do is add it into `tailwind.config.ts`!
+
+:::blockquote{slot="warning" title="IMPORTANT"}  
+Make sure to use relative path when importing the theme token, or tailwind jit will not compiling the config.  
+[Issue regarding this](https://github.com/tailwindlabs/tailwindcss/issues/11097#issuecomment-1526886184)  
+:::
+
+```ts
+import themeToken from "./path/to/themeToken";
+
+const config: Config = {
+	important: true, // So I can override styling on components
+	plugins: [
+		antdTwPlugin({
+			theme: themeToken,
+			options: {
+				prefix: "antd"
+			}
+		})
+	]
+}
+```
+
+and also don't forget to edit your `globals.css`, make sure to import reset css from antd.
+```css
+@import "antd/dist/reset.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+And now antd theme should be added into tailwind class, and could be used globally.  
+![Tailwind color intellisense](using-tailwindcss-with-ant-design-1.png)  
+![Tailwind padding intellisense](using-tailwindcss-with-ant-design-2.png)
+
+## Conclusion
+I decided to create this because I wanted a smoother workflow when using Ant Design alongside TailwindCSS.  
+There definitely room for improvement, but right now I'm pretty satisfied with how it's improve my productivity.  
+If you notice there a mistake or there a better way to do this, please let me know so I could learn from my mistake!
+
+---
+
+Thank you for reading, hope you find this article helpful!
