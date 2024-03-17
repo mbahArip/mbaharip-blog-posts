@@ -2,12 +2,12 @@
 title: How I use Obsidian as my portfolio CMS
 slug: how-i-use-obsidian-as-my-portfolio-cms
 summary: Explaining how I built my site CMS with Obsidian, a markdown note-taking app, including tricks to efficiently fetch content and optimize attachments.
-thumbnail: "![[how-i-use-obsidian-as-my-portfolio-cms.png]]"
+thumbnail: "![[how-i-use-obsidian-as-my-portfolio-cms.webp]]"
 thumbnail_x: 0.5
 thumbnail_y: 0.5
 tags: Obsidian, CMS, Typescript
 created_at: 2023-07-16T19:33:46+07:00
-updated_at: 2024-03-17T20:06:54+07:00
+updated_at: 2024-03-17T23:23:04+07:00
 ---
 :::blockquote{slot="info" title="Notice"}  
 Since I've redo my site, and the way I handle blog post  

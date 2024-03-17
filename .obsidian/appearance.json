@@ -1,7 +1,8 @@
 {
   "accentColor": "",
-  "cssTheme": "Sanctum",
+  "cssTheme": "Minimal",
   "theme": "system",
-  "translucency": false,
-  "nativeMenus": false
+  "translucency": true,
+  "nativeMenus": false,
+  "showViewHeader": true
 }

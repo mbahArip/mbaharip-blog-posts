@@ -37,8 +37,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
-                "mode": "source",
+                "file": "posts/projects/nextjs-google-drive-index.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -94,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 446.5
+    "width": 351.5
   },
   "right": {
     "id": "5cfad9056758166e",
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+                "file": "posts/projects/nextjs-google-drive-index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+                "file": "posts/projects/nextjs-google-drive-index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md"
+                "file": "posts/projects/nextjs-google-drive-index.md"
               }
             }
           },
@@ -180,32 +180,32 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "omnisearch:Omnisearch": false
+      "omnisearch:Omnisearch": false,
+      "gemini-assistant:New Gemini chat": false
     }
   },
   "active": "911bbb5b5b513df2",
   "lastOpenFiles": [
+    "about-me.md",
+    "posts/projects/nextjs-google-drive-index.md",
+    "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+    "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.webp",
+    "attachments/banner/nextjs-google-drive-index.webp",
+    "attachments/banner/using-tailwind-with-antdesign.webp",
     "attachments/og-image.webp",
     "attachments/arief-rachmawan-cv.pdf",
     "attachments/Arief Rachmawan_CV.pdf",
-    "posts/projects/nextjs-google-drive-index.md",
-    "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "attachments/nextjs-google-drive-index-1.png",
     "attachments/banner/nextjs-google-drive-index.png",
     "attachments/banner/nextjs-google-drive-index",
     "attachments/banner/New Bitmap image.bmp",
     "attachments/how-i-use-obsidian-as-my-portfolio-cms-9.png",
     "posts/articles/test-new-post.md",
-    "about-me.md",
     "templates/Generate Index.md",
     "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.png",
     "attachments/banner/dfuj8iko9ru902345.png",
     "templates/Add.md",
     "attachments/banner",
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-8.png",
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-7.png",
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-6.png",
-    "attachments/how-i-use-obsidian-as-my-portfolio-cms-5.png",
     "templates/New post.md",
     "posts/projects/test-project.md",
     "web",

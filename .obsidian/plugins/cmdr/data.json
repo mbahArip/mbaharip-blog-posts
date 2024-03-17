@@ -2,7 +2,14 @@
   "confirmDeletion": false,
   "showAddCommand": true,
   "debug": false,
-  "editorMenu": [],
+  "editorMenu": [
+    {
+      "id": "workspace:toggle-pin",
+      "icon": "lucide-pin",
+      "name": "Toggle pin",
+      "mode": "any"
+    }
+  ],
   "fileMenu": [],
   "leftRibbon": [],
   "rightRibbon": [],
@@ -30,13 +37,23 @@
       "color": "#3cb3fb"
     }
   ],
-  "pageHeader": [],
+  "pageHeader": [
+    {
+      "id": "obsidian-banners:banners:addBanner",
+      "icon": "album",
+      "name": "Banners: Add/Change banner with local image",
+      "mode": "any"
+    }
+  ],
   "macros": [],
   "explorer": [],
   "hide": {
     "statusbar": [],
     "leftRibbon": [
-      "Templater: Insert templates/Test.md"
+      "Templater: Insert templates/Test.md",
+      "Templater",
+      "Insert template",
+      "Advanced Tables Toolbar"
     ]
   },
   "spacing": 8,

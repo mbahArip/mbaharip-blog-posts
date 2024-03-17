@@ -2,12 +2,12 @@
 title: Next.js Google Drive Index
 slug: nextjs-google-drive-index
 summary: Google Drive index built with Next.js for easier sharing files to public
-thumbnail: "![[nextjs-google-drive-index.png]]"
+thumbnail: "![[nextjs-google-drive-index.webp]]"
 thumbnail_x: "0.5"
 thumbnail_y: "0.5"
 tags: Nextjs, Typescript, Index
 created_at: 2024-03-16T19:56:00+07:00
-updated_at: 2024-03-16T21:11:04+07:00
+updated_at: 2024-03-17T23:23:13+07:00
 repository: https://github.com/mbahArip/next-gdrive-index
 demo: https://drive-demo.mbaharip.com/
 ---
