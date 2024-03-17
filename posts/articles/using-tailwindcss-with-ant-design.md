@@ -7,7 +7,7 @@ thumbnail_x: "0.5"
 thumbnail_y: "0.5"
 tags: TailwindCSS, UI, Ant-Design
 created_at: 2024-03-17T23:29:26+07:00
-updated_at: 2024-03-18T01:35:32+07:00
+updated_at: 2024-03-18T02:00:19+07:00
 ---
 Lately I've been using [Ant-design](https://ant.design) (will be mentioned as antd) as my UI library, but there are some problem when I tried to using it with [TailwindCSS](https://tailwindcss.com/) (will be mentioned as tailwind).  
 On this articles, I'll sharing how I'm using Ant-design theme with TailwindCSS.
@@ -93,7 +93,7 @@ export default async function RootLayout({children}: Readonly<{children: React.R
 This is the basic setup of using antd on Next.js, next I will explaining how I make the plugin.
 
 ### Creating Tailwind Plugin
-:::blockquote{slot="warning"}  
+:::blockquote{slot="info"}  
 To be honest, creating a tailwind plugin kinda confusing for me and there might be something wrong on the plugin I wrote.  
 If you think something is wrong or there any better way, please tell me in the comment section so I could learn from my mistake.  
 :::
@@ -290,7 +290,6 @@ At this point I already have antd theme config, and the plugin itself. Now all w
 
 :::blockquote{slot="warning" title="IMPORTANT"}  
 Make sure to use relative path when importing the theme token, or tailwind jit will not compiling the config.  
-[Issue regarding this](https://github.com/tailwindlabs/tailwindcss/issues/11097#issuecomment-1526886184)  
 :::
 
 ```ts
