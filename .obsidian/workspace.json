@@ -37,8 +37,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/projects/nextjs-google-drive-index.md",
-                "mode": "preview",
+                "file": "posts/articles/using-tailwindcss-with-ant-design.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -73,7 +73,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:AntDesign",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +90,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -110,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/projects/nextjs-google-drive-index.md",
+                "file": "posts/articles/using-tailwindcss-with-ant-design.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/projects/nextjs-google-drive-index.md",
+                "file": "posts/articles/using-tailwindcss-with-ant-design.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/projects/nextjs-google-drive-index.md"
+                "file": "posts/articles/using-tailwindcss-with-ant-design.md"
               }
             }
           },
@@ -184,11 +185,13 @@
       "gemini-assistant:New Gemini chat": false
     }
   },
-  "active": "911bbb5b5b513df2",
+  "active": "ac40407ebd5fc614",
   "lastOpenFiles": [
-    "about-me.md",
-    "posts/projects/nextjs-google-drive-index.md",
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
+    "posts/articles/using-tailwindcss-with-ant-design.md",
+    "attachments/banner/using-tailwindcss-with-antdesign.webp",
+    "posts/projects/nextjs-google-drive-index.md",
+    "about-me.md",
     "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.webp",
     "attachments/banner/nextjs-google-drive-index.webp",
     "attachments/banner/using-tailwind-with-antdesign.webp",
@@ -203,7 +206,6 @@
     "posts/articles/test-new-post.md",
     "templates/Generate Index.md",
     "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.png",
-    "attachments/banner/dfuj8iko9ru902345.png",
     "templates/Add.md",
     "attachments/banner",
     "templates/New post.md",
@@ -229,7 +231,6 @@
     "posts/articles/how-i-build-something.md",
     "posts/articles/Test.md",
     "posts/articles/how-i-use-obsidian-and-github-as-my-blog-cms.md",
-    "posts/articles/how-i-use-obsidian-and-github-as-my-portfolio-cms.md",
-    "posts/articles/test-blog-posts.md"
+    "posts/articles/how-i-use-obsidian-and-github-as-my-portfolio-cms.md"
   ]
 }
