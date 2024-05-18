@@ -1,5 +1,5 @@
 {
-  "useCache": true,
+  "useCache": false,
   "hideExcluded": false,
   "ignoreDiacritics": true,
   "indexedFileTypes": [],
@@ -29,4 +29,3 @@
   "httpApiNotice": true,
   "welcomeMessage": "1.21.0",
   "verboseLogging": false
-}
