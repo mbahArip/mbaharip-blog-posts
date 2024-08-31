@@ -7,71 +7,88 @@ thumbnail_x: "0.5"
 thumbnail_y: "0.5"
 tags: Nextjs, Typescript, Index
 created_at: 2024-03-16T19:56:00+07:00
-updated_at: 2024-03-17T23:23:13+07:00
+updated_at: 2024-08-31T12:16:19+07:00
 repository: https://github.com/mbahArip/next-gdrive-index
 demo: https://drive-demo.mbaharip.com/
 ---
-`next-gdrive-index` is an indexer for Google Drive, it's a simple project that I made to share my files in Google Drive.  
-It's aim to simplify the process of sharing files using Google Drive, and also implements some features that I think is useful for sharing files.
+`next-gdrive-index` is a Google Drive directory index. The aim of this project is to simplify the process of sharing files using Google Drive, and also add some features that *I think* is useful when sharing files.
 
-This project are **Heavily Inspired** by [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index) by [SpencerWooo](https://github.com/spencerwooo)  
+> This project are **Heavily Inspired** by [onedrive-vercel-index](https://github.com/spencerwooo/onedrive-vercel-index) by [SpencerWooo](https://github.com/spencerwooo)  
 
 ## Why I Made This?
-I know there's already couple project to create Google Drive index, such as [goindex](https://github.com/alx-xlx/goindex). It was built on Cloudflare Workers and Vue, which I don't have much experience. And it was pretty slow when the files are nested deep into folder. (At first I thought it was Cloudflare fault, after implementing my own I found out it was Google Drive problem)  
-So I decided to create my own Google Drive index using technology I'm more familiar with. **Next.js** and deployed on **Vercel**.
 
-> *"Why don't use Onedrive instead?"*
+> **TLDR;**  
+> It is cheaper to use Google Drive than other similar service
 
-When I compare the price between these two services, Google Drive is cheaper than Onedrive.  
-For 100GB plan, Google Drive price at IDR 269.000 / ~$18 USD annually, meanwhile Onedrive at IDR 319.000 / ~$21 USD annually.  
-Even if I don't want to spend any money, Google Drive offering 15GB of storage, and Onedrive only offering 5GB.
+There are a lot cloud storage service like Onedrive, Dropbox, Mega, etc.  
+But, between all those service, I think Google Drive is a lot cheaper than others (at least in my region).
 
-I know there are a lot of people selling cheap `.edu` account for Google Drive and Onedrive, but most of the time those account doesn't last long, especially Google Drive account.  
-So I want to do it without buying cheap `.edu` account or anything similar.
+Here are the pricing comparison between free and cheapest plan  
+*Price are converted to IDR, since it's easier for me to compare this using my own currency*
+
+| Service          | Free plan       | Paid plan | Price                  | Price to Storage                            | Transfer Quota |
+| :--------------- | :-------------- | :-------- | :--------------------- | :------------------------------------------ | :------------: |
+| **Google Drive** | 15GB            | 2TB       | 135k IDR<br>~112k IDR  | <u>14.8GB / 1k / mo<br>17.8GB / 1k / yr</u> |  **<u>X</u>**  |
+| **Onedrive**\*\* | 5GB             | 1TB       | 96k IDR<br>80k IDR     | 10.4GB / 1k / mo<br>12.5GB / 1k / yr        |  **<u>X</u>**  |
+| **Dropbox**\*    | 2GB             | 2TB       | ~191k IDR<br>~159k IDR | 10.5GB / 1k / mo<br>12.5GB / 1k / yr        |       O        |
+| **MEGA**         | **<u>20GB</u>** | 2TB       | ~174k IDR<br>~145k IDR | 11.5GB / 1k / mo<br>13.8GB / 1k / yr        |       O        |
+
+\* Price are in USD, and there are no regional price for IDR  
+\*\* There are no 2TB plan
+
+By using this data, I picked Google Drive instead other service.  
+I know there are a lot of people selling cheap education account especially for Google Drive and Onedrive, but most of the time <u>those account doesn't last long</u>.
+
 ## Features
-- **Private Index**, Lock the whole site with a password
-- **Folder and file protection**, You can add password to a folder
-- **Readme file**, Add a note / readme to a folder
-- **File preview**, Preview files directly on the site. Supported files:
-	- Image (only format supported by the browser)
-	- Video (only format supported by the browser)
-	- Audio (only format supported by the browser)
-	- Markdown
-	- PDF
-	- Document (docx, pptx, xlsx)
-	- Code
-	- Text
-	- Manga (cbz)
-- **File search**, Find your folders / files easily
-- **Raw file link**, Use the index to host assets for your website or embed it on forums
-## Security
-All files that will be shown, **Need to be Shared** with `Anyone with the link can view` permission.  
-This is because Google Drive API can only access files that are shared with this permission.
+- **Private Index**, protect the whole site with a password
+- **Folder and file protection**, protect certain path with a password
+- **Readme file**, add description (or whatever) inside a readme to be rendered when you open the folder
+- **File preview**, preview the file before download ( Preview file size limit can be adjusted )
+  - Image preview
+  - Video preview
+  - Audio preview
+  - Document preview
+  - Code / Text / Markdown preview
+  - Manga preview (cbz)
+- **File search**, search by the file or folder name
+- **Direct download**, download directly via API route instead of google drive link ( Size limit can be adjusted )
+- **Raw file link**, embed your media files
+- **Light/Dark mode**, choose your side!
+- **Customizable Theme**, we are using `shadcn/ui` now! you can customize your site [via configuration page](https://drive-demo.mbaharip.com/deploy#theme)
+- **Links**, add social, or information link on the navbar
+- **Sponsors**, using this for thing for community? add a sponsor / donate button on your navbar!
 
-But, every files `id` and `webContentLink` are encrypted with `AES-256-CBC` using your own key, so no one can view the `id` / `webContentLink` of your files without the correct key.  
-Except, if the files are larger than the `fileSizeLimit` (default is 4MB for Vercel), then the `webContentLink` will be used as download link.
 ## Known Issues
 ### File Size Limit
-File size limit causing some files can't be previewed, and the download will be redirected to the raw file link.  
-The file size limit can be changed on config file.
-### Long Response Time
-The flow of the data fetching is like this:  
-![App flow](nextjs-google-drive-index-1.png)  
-The app will checking for each path to validate if the path is valid.  
-Example, if user trying to access `/folder A/folder B/folder C/some-files.png`  
-It will check if:
-1. `some-files.png` is actually inside `folder C`
-2. `folder C` is actually inside `folder B`
-3. `folder B` is actually inside `folder A`  
-So the deeper the nested folder, the longer the check process.
+> This only apply if `maxFileSize` is enabled / more than 0
 
-At the moment, it roughly take around 600 - 2 seconds to access nested files on my Google Drive.  
-To improve the response time, I've added cache to the response so the next time you trying to access the same path it *hopefully* will be faster.  
-You can change how long the cache on config file.
-### Shared Drive is ~~not~~ now Supported
-~~I don't have Shared Google Drive, so I can't test it and or implement it.~~  
-Implemented by [@loadingthedev](https://github.com/mbahArip/next-gdrive-index/pull/4)
-### No Support for Google Docs, Sheets, or Slides
-For now, I don't have any plan to implement this.  
-All Google Drive files like Docs, Sheets, and Slides are hidden from the list.  
-PR are welcome though~ ;)
+You need to set the file sharing permission to `Anyone with the link can view` on the root folder.
+
+**Why?**  
+The download link will be redirected if the file you're trying to download is bigger than the `maxFileSize`, and most of platform are limiting the response body size (ex: Vercel limit is 4MB).  
+If you don't set the permission, people can't access or download the file.
+
+This will <u>expose the file ID</u>, and people can access the file directly from Google Drive.  
+But it <u>only apply to the file</u>, and they can't see or browse the folder directly from Google Drive.
+### No Support for Google Docs, Sheets, and Slides
+For now, I don't have any plan to implement this because I'm not using it.  
+If you think you can implement it, feel free to create a PR! ;)
+### ~~Can't Seek on Audio and Video preview~~
+~~It looks like you can't seek the audio and video preview, so you need to listen / watch from the beginning.~~  
+Fixed on v2.0.2
+### ~~Shared Drive is not supported~~
+~~I don't have Shared Drive, so I can't test it and implement it~~  
+Implemented by [@loadingthedev](https://github.com/loadingthedev) [(PR #4)](https://github.com/mbahArip/next-gdrive-index/pull/4)
+### Not Supporting File / Folder Shortcut
+Google Drive will give different ID for the shortcut and the actual target itself.  
+Might need to change the way I fetch files to support this
+
+## Things Might Be Implemented
+Here are things that I want, and might be implemented on the future
+### Internationalization / i18n
+It should be a good idea to have the site and deploying guide with multiple language support.
+### Multiple Drive
+It's either from multiple Google Drive account with multiple Service Account, or a basic single Google Drive account with multiple root start point either in their own Drive or Shared Drive
+### Authentication
+Probably a good feature if you are a content creator that only want the one who subscribed to you get the files.  
+It might need a database, but idk if I can implement it without the need of database

@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/articles/using-tailwindcss-with-ant-design.md",
+                "file": "posts/projects/nextjs-google-drive-index.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/articles/using-tailwindcss-with-ant-design.md",
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/articles/using-tailwindcss-with-ant-design.md",
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/articles/using-tailwindcss-with-ant-design.md"
+                "file": "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md"
               }
             }
           },
@@ -172,26 +171,26 @@
       "gemini-assistant:New Gemini chat": false
     }
   },
-  "active": "3ee6cdf71e065919",
+  "active": "0bb5b3098670644e",
   "lastOpenFiles": [
+    "posts/projects/nextjs-google-drive-index.md",
+    "posts/projects/vertex-warehouse.md",
+    "attachments/vertex-warehouse-7.png",
+    "attachments/vertex-warehouse-6.png",
+    "attachments/vertex-warehouse-5.png",
+    "attachments/vertex-warehouse-4.png",
+    "attachments/vertex-warehouse-3.png",
+    "attachments/vertex-warehouse-2.png",
+    "attachments/vertex-warehouse-1.png",
+    "attachments/banner/vertex-warehouse.webp",
+    "posts/articles/using-tailwindcss-with-ant-design.md",
     "attachments/banner/using-tailwindcss-with-ant-design.webp",
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
-    "posts/articles/using-tailwindcss-with-ant-design.md",
     "about-me.md",
     "attachments/using-tailwindcss-with-ant-design-2.png",
-    "attachments/using-tailwindcss-with-ant-design-1.png",
-    "attachments/banner/using-tailwindcss-with-antdesign.webp",
-    "posts/projects/nextjs-google-drive-index.md",
-    "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.webp",
-    "attachments/banner/nextjs-google-drive-index.webp",
-    "attachments/banner/using-tailwind-with-antdesign.webp",
-    "attachments/og-image.webp",
     "attachments/arief-rachmawan-cv.pdf",
     "attachments/Arief Rachmawan_CV.pdf",
-    "attachments/nextjs-google-drive-index-1.png",
-    "attachments/banner/nextjs-google-drive-index.png",
     "attachments/banner/nextjs-google-drive-index",
-    "attachments/banner/New Bitmap image.bmp",
     "posts/articles/test-new-post.md",
     "templates/Generate Index.md",
     "templates/Add.md",
@@ -218,7 +217,6 @@
     "posts/projects/look-at-my-projects.md",
     "posts/articles/how-i-build-something.md",
     "posts/articles/Test.md",
-    "posts/articles/how-i-use-obsidian-and-github-as-my-blog-cms.md",
-    "posts/articles/how-i-use-obsidian-and-github-as-my-portfolio-cms.md"
+    "posts/articles/how-i-use-obsidian-and-github-as-my-blog-cms.md"
   ]
 }
