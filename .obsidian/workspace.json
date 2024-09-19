@@ -8,24 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0bb5b3098670644e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/articles/useurlstate-persist-your-state-on-url.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3ee6cdf71e065919",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/projects/nextjs-google-drive-index.md",
+                "file": "posts/articles/useurlstate-persist-your-state-on-url.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,7 +146,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 308.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -171,24 +159,24 @@
       "gemini-assistant:New Gemini chat": false
     }
   },
-  "active": "0bb5b3098670644e",
+  "active": "3ee6cdf71e065919",
   "lastOpenFiles": [
+    "posts/projects/nextjs-google-drive-index.md",
+    "attachments/banner/useurlstate-persist-your-state-on-url.png",
+    "posts/articles/useurlstate-persist-your-state-on-url.md",
+    "attachments/useurlstate-persist-your-state-on-url-4.png",
+    "attachments/useurlstate-persist-your-state-on-url-3.png",
+    "attachments/useurlstate-persist-your-state-on-url-2.png",
+    "attachments/useurlstate-persist-your-state-on-url-1.png",
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "posts/articles/using-tailwindcss-with-ant-design.md",
-    "posts/articles/useurlstate-persist-your-state-on-url.md",
-    "posts/projects/nextjs-google-drive-index.md",
     "posts/projects/vertex-warehouse.md",
     "attachments/vertex-warehouse-7.png",
     "attachments/vertex-warehouse-6.png",
     "attachments/vertex-warehouse-5.png",
     "attachments/vertex-warehouse-4.png",
     "attachments/vertex-warehouse-3.png",
-    "attachments/vertex-warehouse-2.png",
-    "attachments/vertex-warehouse-1.png",
-    "attachments/banner/vertex-warehouse.webp",
-    "attachments/banner/using-tailwindcss-with-ant-design.webp",
     "about-me.md",
-    "attachments/using-tailwindcss-with-ant-design-2.png",
     "attachments/arief-rachmawan-cv.pdf",
     "attachments/Arief Rachmawan_CV.pdf",
     "attachments/banner/nextjs-google-drive-index",
@@ -217,7 +205,6 @@
     "posts/articles/how-i-use-obsidian-as-my-portoflio-cms.md",
     "posts/projects/look-at-my-projects.md",
     "posts/articles/how-i-build-something.md",
-    "posts/articles/Test.md",
-    "posts/articles/how-i-use-obsidian-and-github-as-my-blog-cms.md"
+    "posts/articles/Test.md"
   ]
 }
