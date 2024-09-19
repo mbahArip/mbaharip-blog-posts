@@ -7,7 +7,7 @@ thumbnail_x: ""
 thumbnail_y: ""
 tags: 
 created_at: 2024-09-19T16:05:03+07:00
-updated_at: 2024-09-19T17:42:54+07:00
+updated_at: 2024-09-19T18:46:26+07:00
 ---
 
 Saving state in URL is a common practice in web development, there a lot of benefits of doing so, such as sharing the state with others, bookmarking the page with the state, and more.  
@@ -74,11 +74,11 @@ type useURLStateOptions = {
 	// Push will add to history, allowing back
 	// While replace will not
 	// Default to "replace"
-	routerType: "push" | "replace";
+	routerBehavior: "push" | "replace";
 }
 export default function useURLState<T extends z.ZodType<unknown>>(
 	schema: T,
-	options?: useURLStateOptions
+	options?: useURLStateOptions = {}
 ): useURLStateReturnValue<T> {
 
 	return []
@@ -114,25 +114,28 @@ After preparing the initial files, the types, and your filter Zod schema, now we
 
 export default function useURLState<T extends z.ZodType<unknown>>(
 	schema: T,
-	options?: useURLStateOptions
+	options?: useURLStateOptions = {}
 ): useURLStateReturnValue<T> {
 	const router = useRouter();
 	const sp = useSearchParams();
 	const pathname = usePathname();
 
+	// Set the default options value
+	const { routerBehavior = "replace" } = options;
+
 	// Memoize the value to make sure it only re-render when the schema changed
 	// We will using this value to reset the url state
 	// Since our schema have default value
 	// If we provide empty object, it will have the default value on all keys
-	const defaultState = useMemo<ZodInfer<T>>(
-		() => schema.parse({}) as ZodInfer<T>,
+	const defaultState = useMemo<z.infer<T>>(
+		() => schema.parse({}) as z.infer<T>,
 		[schema]
 	)
 
 	// Our URL State
 	// It should be taking all the initial values from current url search params
-	const [urlState, setUrlState] = useState<ZodInfer<T>>(
-		schema.parse(Object.fromEntries(sp.entries())) as ZodInfer<T>;
+	const [urlState, setUrlState] = useState<z.infer<T>>(
+		schema.parse(Object.fromEntries(sp.entries())) as z.infer<T>;
 	)
 	
 	return []
@@ -148,24 +151,143 @@ But it should be safe, even when we parse the search params on `urlState`, it sh
 
 ### Add `updateState` function
 After adding the state, now we can move on to making the update function.
-It's pretty tricky, since we need to set it to the `urlState`, update the URL, and make sure to remove all state with default values.
+It's pretty tricky, since we need to set it to the `urlState`, update the URL, and make sure to remove all state with default value.
 
 First we need to update the `urlState`, it's pretty straightforward since it's the basic of React state update
 
 ```tsx
 export default function useURLState<T extends z.ZodType<unknown>>(
 	schema: T,
-	options?: useURLStateOptions
+	options?: useURLStateOptions = {}
 ): useURLStateReturnValue<T> {
 	// State goes here...
 
 	const onUpdateState = useCallback(
-		() => {
+		(previous: UpdateFunction<T>) => {
 			setUrlState((prev) => {
-				const newState = typeof previous === "function" ? previous
+				const newPartialState = typeof previous === "function" ? previous(prev) : previous;
+				const newState = {
+					...(prev as Record<string, unknown>),
+					...(newPartialState as Record<string,unknown>)
+				};
+
+				const parsedState = schema.safeParse(newState);
+				if(!parsedState.success) {
+					// Add your error handler here
+					console.error("Failed to update state");
+					console.error(parsedNewState.error.flatten());
+					return prev;
+				}
+
+				return parsedState.data as z.infer<T>
 			})
 		},
 		[defaultState, pathname, router, sp, schema]
+	)
+	
+	return []
+}
+```
+
+With this we have basic state update, now we need to update the URL and remove the state if it's default value.
+
+```tsx
+export default function useURLState<T extends z.ZodType<unknown>>(
+	schema: T,
+	options?: useURLStateOptions = {}
+): useURLStateReturnValue<T> {
+	// State goes here...
+
+	const onUpdateState = useCallback(
+		(previous: UpdateFunction<T>) => {
+			setUrlState((prev) => {
+				const newPartialState = typeof previous === "function" ? previous(prev) : previous;
+				const newState = {
+					...(prev as Record<string, unknown>),
+					...(newPartialState as Record<string,unknown>)
+				};
+
+				const parsedState = schema.safeParse(newState);
+				if(!parsedState.success) {
+					// Add your error handler here
+					console.error("Failed to update state");
+					console.error(parsedNewState.error.flatten());
+					return prev;
+				}
+
+				const searchParams = new URLSearchParams(sp.toString());
+				Object.keys(newPartialState).forEach(
+					(key) => {
+						// Check if the key is undefined
+						// or equal to default value
+						// If so, then remove it from the search params
+						if(
+							newState[key] === undefined ||
+							String(newState[key]) === String(defaultState[key as keyof z.infer<T>])
+						) {
+							searchParams.delete(key);
+						} else {
+							searchParams.set(key, String(newState[key]))
+						}
+					}
+				)
+				
+				// Assign the search params to current URL
+				const url = new URL(pathname, window.location.href);
+				url.search = searchParams.toString();
+				if(routerBehavior === "replace") {
+					router.replace(url.toString(), { scroll: false })
+				} else {
+					router.push(url.toString(), { scroll: false })
+				}
+
+				return parsedState.data as z.infer<T>
+			})
+		},
+		[defaultState, pathname, router, sp, schema, routerBehavior]
+	)
+	
+	return []
+}
+```
+
+### Add `resetState` function
+Now we create `resetState` function that will be useful if you want to reset the state with a single click.
+You can skip this step if you don't need it.
+
+Basically we only need to remove all keys that exist on our schema, update the state, then update the URL
+
+```tsx
+export default function useURLState<T extends z.ZodType<unknown>>(
+	schema: T,
+	options?: useURLStateOptions = {}
+): useURLStateReturnValue<T> {
+	// State goes here...
+
+	const onResetState = useCallback(
+		() => {
+			setUrlState(() => {
+				const searchParams = new URLSearchParams(sp.toString());
+				for(const key of Object.keys(defaultState)) {
+					searchParams.delete(key);
+				}
+
+				const url = new URL(pathname, window.location.href);
+				url.search = searchParams.toString();
+				
+				// Assign the search params to current URL
+				const url = new URL(pathname, window.location.href);
+				url.search = searchParams.toString();
+				if(routerBehavior === "replace") {
+					router.replace(url.toString(), { scroll: false })
+				} else {
+					router.push(url.toString(), { scroll: false })
+				}
+
+				return defaultState;
+			})
+		},
+		[defaultState, pathname, router, sp, routerBehavior]
 	)
 	
 	return []
