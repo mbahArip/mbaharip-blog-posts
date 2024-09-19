@@ -2,12 +2,12 @@
 title: UseURLState - Persist your state on URL
 slug: useurlstate-persist-your-state-on-url
 summary: Type-safe URL state management using Zod
-thumbnail: "![[useurlstate-persist-your-state-on-url.png]]"
+thumbnail: "![[useurlstate-persist-your-state-on-url.webp]]"
 thumbnail_x: "0.5"
 thumbnail_y: "0.5"
 tags: Nextjs, Zod, Typescript
 created_at: 2024-09-19T16:05:03+07:00
-updated_at: 2024-09-19T19:58:35+07:00
+updated_at: 2024-09-19T20:01:34+07:00
 ---
 Saving state in URL is a common practice in web development, there a lot of benefits of doing so, such as sharing the state with others, bookmarking the page with the state, and more.  
 This practice is especially useful to save the state of a filter, pagination, or any other state that can be represented as a query parameter.  
