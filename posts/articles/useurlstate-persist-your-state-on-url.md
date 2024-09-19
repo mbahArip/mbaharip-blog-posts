@@ -7,7 +7,7 @@ thumbnail_x: ""
 thumbnail_y: ""
 tags: 
 created_at: 2024-09-19T16:05:03+07:00
-updated_at: 2024-09-19T16:35:47+07:00
+updated_at: 2024-09-19T16:50:03+07:00
 ---
 
 Saving state in URL is a common practice in web development, there a lot of benefits of doing so, such as sharing the state with others, bookmarking the page with the state, and more.  
@@ -27,6 +27,16 @@ You can follow this article to see how I do it, or go to the **Result section** 
 
 ## Code Time
 ### Initial Hook File
+First we need to create our base hook file on `/src/hooks` folder, you are free to name the hook whatever you want but I will name it `useURLState`.
+The path should be `/src/hooks/useURLState.tsx` now.
 
+```tsx
+"use client";
+
+export default function useURLState() {
+
+	return []
+}
+```
 
 ## Conclusion
