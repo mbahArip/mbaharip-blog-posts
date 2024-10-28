@@ -1,5 +1,18 @@
 [
   {
+    "slug": "seeding-db-using-drizzle-orm",
+    "title": "Seeding DB using Drizzle ORM",
+    "summary": "Since their package still not available",
+    "type": "article",
+    "tags": [
+      "PostgreSQL",
+      "Drizzle",
+      "Typescript"
+    ],
+    "created_at": "2024-10-28T21:31:34.000Z",
+    "updated_at": "2024-10-28T22:34:15.000Z"
+  },
+  {
     "slug": "useurlstate-persist-your-state-on-url",
     "title": "UseURLState - Persist your state on URL",
     "summary": "Type-safe URL state management using Zod",
@@ -10,7 +23,7 @@
       "Typescript"
     ],
     "created_at": "2024-09-19T09:05:03.000Z",
-    "updated_at": "2024-09-19T12:58:35.000Z"
+    "updated_at": "2024-09-19T13:01:34.000Z"
   },
   {
     "slug": "using-tailwindcss-with-ant-design",

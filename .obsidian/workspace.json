@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/articles/useurlstate-persist-your-state-on-url.md",
+                "file": "posts/articles/seeding-db-using-drizzle-orm.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/articles/useurlstate-persist-your-state-on-url.md",
+                "file": "posts/articles/seeding-db-using-drizzle-orm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "posts/articles/useurlstate-persist-your-state-on-url.md",
+                "file": "posts/articles/seeding-db-using-drizzle-orm.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/articles/useurlstate-persist-your-state-on-url.md"
+                "file": "posts/articles/seeding-db-using-drizzle-orm.md"
               }
             }
           },
@@ -159,24 +159,26 @@
       "gemini-assistant:New Gemini chat": false
     }
   },
-  "active": "143dacffdb23884f",
+  "active": "3ee6cdf71e065919",
   "lastOpenFiles": [
+    "posts/articles/useurlstate-persist-your-state-on-url.md",
+    "attachments/banner/seeding-db-using-drizzle-orm.webp",
+    "attachments/banner/seeding-db-using-drizzle-orm.webp.opdownload",
     "attachments/banner/useurlstate-persist-your-state-on-url.webp",
+    "attachments/banner/nextjs-google-drive-index.webp",
+    "attachments/banner/how-i-use-obsidian-as-my-portfolio-cms.webp",
+    "posts/articles/seeding-db-using-drizzle-orm.md",
+    "attachments/seeding-db-using-drizzle-orm-1.png",
+    "attachments/banner/seeding-db-using-drizzle-orm-1.png",
+    "Untitled.md",
     "posts/projects/nextjs-google-drive-index.md",
     "attachments/banner/useurlstate-persist-your-state-on-url.png",
-    "posts/articles/useurlstate-persist-your-state-on-url.md",
     "attachments/useurlstate-persist-your-state-on-url-4.png",
     "attachments/useurlstate-persist-your-state-on-url-3.png",
     "attachments/useurlstate-persist-your-state-on-url-2.png",
-    "attachments/useurlstate-persist-your-state-on-url-1.png",
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms.md",
     "posts/articles/using-tailwindcss-with-ant-design.md",
     "posts/projects/vertex-warehouse.md",
-    "attachments/vertex-warehouse-7.png",
-    "attachments/vertex-warehouse-6.png",
-    "attachments/vertex-warehouse-5.png",
-    "attachments/vertex-warehouse-4.png",
-    "attachments/vertex-warehouse-3.png",
     "about-me.md",
     "attachments/arief-rachmawan-cv.pdf",
     "attachments/Arief Rachmawan_CV.pdf",
@@ -194,7 +196,6 @@
     "node_modules",
     "README-1.lock",
     "scripts/index.ts",
-    "scripts/README-1.ts",
     "posts/articles/test.md",
     "posts/articles/Untitled.md",
     "posts/articles/test-lorem.md",
@@ -204,8 +205,6 @@
     "posts/articles/test-cms.md",
     "posts/articles/how-i-use-obsidian-as-my-portfolio-cms 1.md",
     "posts/articles/how-i-use-obsidian-as-my-portoflio-cms.md",
-    "posts/projects/look-at-my-projects.md",
-    "posts/articles/how-i-build-something.md",
-    "posts/articles/Test.md"
+    "posts/projects/look-at-my-projects.md"
   ]
 }
