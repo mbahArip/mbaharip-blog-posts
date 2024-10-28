@@ -7,9 +7,9 @@ thumbnail_x: "0.5"
 thumbnail_y: "0.5"
 tags: PostgreSQL, Drizzle, Typescript
 created_at: 2024-10-29T04:31:34+07:00
-updated_at: 2024-10-29T05:34:15+07:00
+updated_at: 2024-10-29T05:37:23+07:00
 ---
-> [!NOTE]  
+> **NOTE**  
 > As I wrote this article (2024/10/29), [data seeding documentation](https://orm.drizzle.team/docs/kit-seed-data) still not available
 
 Currently I'm updating one of my project to a new database, with new feature and changed database structure.  
@@ -29,7 +29,7 @@ Since this gonna be a short article, I'll only post the code and explaining it o
 
 In this project **I'm using NextJS**, so I'll make the script inside the router handler to make it easier for me.
 
-> [!WARNING]  
+> **WARNING**  
 > Make sure to actually secure the endpoint so it can't be accessed on prod  
 > For me, I'm securing it via middleware to return 404 if it's on prod
 

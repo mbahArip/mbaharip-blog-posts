@@ -7,7 +7,7 @@ thumbnail_x: "0.5"
 thumbnail_y: "0.5"
 tags: TailwindCSS, UI, Ant-Design
 created_at: 2024-03-17T23:29:26+07:00
-updated_at: 2024-09-19T16:32:16+07:00
+updated_at: 2024-10-29T05:37:11+07:00
 ---
 Lately I've been using [Ant-design](https://ant.design) (will be mentioned as antd) as my UI library, but there are some problem when I tried to using it with [TailwindCSS](https://tailwindcss.com/) (will be mentioned as tailwind).  
 On this articles, I'll sharing how I'm using Ant-design theme with TailwindCSS.
